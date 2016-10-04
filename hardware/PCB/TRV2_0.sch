@@ -16668,7 +16668,7 @@ DIN A3, landscape with extra doc field</description>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
-<part name="SV1" library="con-lstb" deviceset="MA07-2" device=""/>
+<part name="J1" library="con-lstb" deviceset="MA07-2" device=""/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
 <part name="C7" library="rcl" deviceset="C-EU" device="C0603" value="100N"/>
 <part name="GND21" library="supply1" deviceset="GND" device=""/>
@@ -16763,7 +16763,7 @@ DIN A3, landscape with extra doc field</description>
 <instance part="GND17" gate="1" x="302.26" y="203.2"/>
 <instance part="GND18" gate="1" x="322.58" y="203.2"/>
 <instance part="GND19" gate="1" x="340.36" y="203.2"/>
-<instance part="SV1" gate="G$1" x="330.2" y="137.16" rot="R180"/>
+<instance part="J1" gate="G$1" x="330.2" y="137.16" rot="R180"/>
 <instance part="GND20" gate="1" x="345.44" y="139.7" rot="R90"/>
 <instance part="C7" gate="G$1" x="365.76" y="139.7"/>
 <instance part="GND21" gate="1" x="365.76" y="127"/>
@@ -16899,7 +16899,7 @@ DIN A3, landscape with extra doc field</description>
 <label x="340.36" y="241.3" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SV1" gate="G$1" pin="2"/>
+<pinref part="J1" gate="G$1" pin="2"/>
 <wire x1="337.82" y1="144.78" x2="340.36" y2="144.78" width="0.1524" layer="91"/>
 <label x="337.82" y="144.78" size="1.778" layer="95"/>
 </segment>
@@ -17078,7 +17078,7 @@ DIN A3, landscape with extra doc field</description>
 <wire x1="340.36" y1="205.74" x2="340.36" y2="208.28" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="SV1" gate="G$1" pin="6"/>
+<pinref part="J1" gate="G$1" pin="6"/>
 <pinref part="GND20" gate="1" pin="GND"/>
 <wire x1="342.9" y1="139.7" x2="337.82" y2="139.7" width="0.1524" layer="91"/>
 </segment>
@@ -17181,7 +17181,7 @@ DIN A3, landscape with extra doc field</description>
 <segment>
 <wire x1="322.58" y1="134.62" x2="320.04" y2="134.62" width="0.1524" layer="91"/>
 <label x="312.42" y="134.62" size="1.778" layer="95"/>
-<pinref part="SV1" gate="G$1" pin="9"/>
+<pinref part="J1" gate="G$1" pin="9"/>
 </segment>
 <segment>
 <pinref part="IC5" gate="1" pin="ANALOG_5"/>
@@ -17216,7 +17216,7 @@ DIN A3, landscape with extra doc field</description>
 <pinref part="R6" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="SV1" gate="G$1" pin="10"/>
+<pinref part="J1" gate="G$1" pin="10"/>
 <wire x1="337.82" y1="134.62" x2="340.36" y2="134.62" width="0.1524" layer="91"/>
 <label x="340.36" y="134.62" size="1.778" layer="95"/>
 </segment>
@@ -17333,7 +17333,7 @@ DIN A3, landscape with extra doc field</description>
 <label x="106.68" y="170.18" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SV1" gate="G$1" pin="14"/>
+<pinref part="J1" gate="G$1" pin="14"/>
 <wire x1="337.82" y1="129.54" x2="340.36" y2="129.54" width="0.1524" layer="91"/>
 <label x="340.36" y="129.54" size="1.778" layer="95"/>
 </segment>
@@ -17374,7 +17374,7 @@ DIN A3, landscape with extra doc field</description>
 <label x="205.74" y="154.94" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SV1" gate="G$1" pin="4"/>
+<pinref part="J1" gate="G$1" pin="4"/>
 <wire x1="337.82" y1="142.24" x2="340.36" y2="142.24" width="0.1524" layer="91"/>
 <label x="337.82" y="142.24" size="1.778" layer="95"/>
 </segment>
@@ -17393,7 +17393,7 @@ DIN A3, landscape with extra doc field</description>
 <segment>
 <wire x1="322.58" y1="144.78" x2="320.04" y2="144.78" width="0.1524" layer="91"/>
 <label x="312.42" y="144.78" size="1.778" layer="95"/>
-<pinref part="SV1" gate="G$1" pin="1"/>
+<pinref part="J1" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="IC5" gate="1" pin="DIGITAL_12"/>
@@ -17410,12 +17410,16 @@ DIN A3, landscape with extra doc field</description>
 <segment>
 <wire x1="322.58" y1="142.24" x2="320.04" y2="142.24" width="0.1524" layer="91"/>
 <label x="312.42" y="142.24" size="1.778" layer="95"/>
-<pinref part="SV1" gate="G$1" pin="3"/>
+<pinref part="J1" gate="G$1" pin="3"/>
 </segment>
 <segment>
 <pinref part="R24" gate="G$1" pin="2"/>
 <wire x1="210.82" y1="25.4" x2="203.2" y2="25.4" width="0.1524" layer="91"/>
 <label x="198.12" y="25.4" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="190.5" y1="48.26" x2="177.8" y2="48.26" width="0.1524" layer="91"/>
+<label x="180.34" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -17516,7 +17520,7 @@ DIN A3, landscape with extra doc field</description>
 </net>
 <net name="RESET" class="0">
 <segment>
-<pinref part="SV1" gate="G$1" pin="5"/>
+<pinref part="J1" gate="G$1" pin="5"/>
 <wire x1="322.58" y1="139.7" x2="320.04" y2="139.7" width="0.1524" layer="91"/>
 <label x="312.42" y="139.7" size="1.778" layer="95"/>
 </segment>
@@ -17533,7 +17537,7 @@ DIN A3, landscape with extra doc field</description>
 </net>
 <net name="BOILER" class="0">
 <segment>
-<pinref part="SV1" gate="G$1" pin="7"/>
+<pinref part="J1" gate="G$1" pin="7"/>
 <wire x1="322.58" y1="137.16" x2="320.04" y2="137.16" width="0.1524" layer="91"/>
 <label x="312.42" y="137.16" size="1.778" layer="95"/>
 </segment>
@@ -17545,7 +17549,7 @@ DIN A3, landscape with extra doc field</description>
 </net>
 <net name="RXD0B" class="0">
 <segment>
-<pinref part="SV1" gate="G$1" pin="11"/>
+<pinref part="J1" gate="G$1" pin="11"/>
 <wire x1="322.58" y1="132.08" x2="320.04" y2="132.08" width="0.1524" layer="91"/>
 <label x="312.42" y="132.08" size="1.778" layer="95"/>
 </segment>
@@ -17557,13 +17561,13 @@ DIN A3, landscape with extra doc field</description>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="SV1" gate="G$1" pin="8"/>
+<pinref part="J1" gate="G$1" pin="8"/>
 <wire x1="337.82" y1="137.16" x2="340.36" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TXD0B" class="0">
 <segment>
-<pinref part="SV1" gate="G$1" pin="12"/>
+<pinref part="J1" gate="G$1" pin="12"/>
 <wire x1="337.82" y1="132.08" x2="340.36" y2="132.08" width="0.1524" layer="91"/>
 <label x="340.36" y="132.08" size="1.778" layer="95"/>
 </segment>
