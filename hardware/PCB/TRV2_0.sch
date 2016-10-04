@@ -16509,24 +16509,24 @@ DIN A3, landscape with extra doc field</description>
 <packages>
 <package name="APDS-9300-020">
 <description>Dual &lt;B&gt;PHOTO DIODE&lt;/B&gt;</description>
-<wire x1="-3.556" y1="2.032" x2="-3.429" y2="2.032" width="0.1524" layer="21"/>
-<wire x1="-3.556" y1="2.032" x2="-3.556" y2="-2.032" width="0.1524" layer="21"/>
-<wire x1="3.556" y1="-2.032" x2="3.429" y2="-2.032" width="0.1524" layer="21"/>
-<wire x1="3.556" y1="-2.032" x2="3.556" y2="2.032" width="0.1524" layer="21"/>
-<wire x1="3.429" y1="-2.032" x2="3.429" y2="2.032" width="0.1524" layer="21"/>
-<wire x1="3.429" y1="-2.032" x2="-3.429" y2="-2.032" width="0.1524" layer="21"/>
-<wire x1="3.429" y1="2.032" x2="3.556" y2="2.032" width="0.1524" layer="21"/>
-<wire x1="-3.429" y1="-2.032" x2="-3.429" y2="2.032" width="0.1524" layer="21"/>
-<wire x1="-3.429" y1="-2.032" x2="-3.556" y2="-2.032" width="0.1524" layer="21"/>
-<wire x1="-3.429" y1="2.032" x2="3.429" y2="2.032" width="0.1524" layer="21"/>
+<wire x1="-2.286" y1="2.032" x2="-2.159" y2="2.032" width="0.1524" layer="21"/>
+<wire x1="-2.286" y1="2.032" x2="-2.286" y2="-2.032" width="0.1524" layer="21"/>
+<wire x1="2.286" y1="-2.032" x2="2.159" y2="-2.032" width="0.1524" layer="21"/>
+<wire x1="2.286" y1="-2.032" x2="2.286" y2="2.032" width="0.1524" layer="21"/>
+<wire x1="2.159" y1="-2.032" x2="2.159" y2="2.032" width="0.1524" layer="21"/>
+<wire x1="2.159" y1="-2.032" x2="-2.159" y2="-2.032" width="0.1524" layer="21"/>
+<wire x1="2.159" y1="2.032" x2="2.286" y2="2.032" width="0.1524" layer="21"/>
+<wire x1="-2.159" y1="-2.032" x2="-2.159" y2="2.032" width="0.1524" layer="21"/>
+<wire x1="-2.159" y1="-2.032" x2="-2.286" y2="-2.032" width="0.1524" layer="21"/>
+<wire x1="-2.159" y1="2.032" x2="2.159" y2="2.032" width="0.1524" layer="21"/>
 <text x="2.54" y="-2.54" size="1.27" layer="25" ratio="10" rot="R180">&gt;NAME</text>
 <text x="2.54" y="3.81" size="1.27" layer="27" ratio="10" rot="R180">&gt;VALUE</text>
-<smd name="P$3" x="-2.2" y="-1" dx="1.1" dy="0.6" layer="1"/>
-<smd name="P$4" x="2.2" y="-1" dx="1.1" dy="0.6" layer="1"/>
-<smd name="P$5" x="2.2" y="0" dx="1.1" dy="0.7" layer="1"/>
-<smd name="P$6" x="2.2" y="1" dx="1.1" dy="0.6" layer="1"/>
-<smd name="P$1" x="-2.2" y="1" dx="1.1" dy="0.6" layer="1"/>
-<smd name="P$2" x="-2.2" y="0" dx="1.1" dy="0.7" layer="1"/>
+<smd name="P$3" x="-1.1" y="-1" dx="1.1" dy="0.6" layer="1"/>
+<smd name="P$4" x="1.1" y="-1" dx="1.1" dy="0.6" layer="1"/>
+<smd name="P$5" x="1.1" y="0" dx="1.1" dy="0.7" layer="1"/>
+<smd name="P$6" x="1.1" y="1" dx="1.1" dy="0.6" layer="1"/>
+<smd name="P$1" x="-1.1" y="1" dx="1.1" dy="0.6" layer="1"/>
+<smd name="P$2" x="-1.1" y="0" dx="1.1" dy="0.7" layer="1"/>
 </package>
 </packages>
 <symbols>
