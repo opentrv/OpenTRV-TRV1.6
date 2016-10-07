@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.3">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -8400,10 +8400,10 @@ J-Bend SMD version434153017835</description>
 <text x="0.4" y="-1.1" size="0.8128" layer="48">4</text>
 </package>
 <package name="434331013822">
-<smd name="1" x="-1.9" y="0.7" dx="1.6" dy="1" layer="1"/>
-<smd name="2" x="1.9" y="0.7" dx="1.6" dy="1" layer="1"/>
-<smd name="3" x="1.9" y="-0.7" dx="1.6" dy="1" layer="1"/>
-<smd name="4" x="-1.9" y="-0.7" dx="1.6" dy="1" layer="1"/>
+<smd name="1" x="-2.5" y="1" dx="1" dy="1" layer="1"/>
+<smd name="2" x="2.5" y="1" dx="1" dy="1" layer="1"/>
+<smd name="3" x="2.5" y="-1" dx="1" dy="1" layer="1"/>
+<smd name="4" x="-2.5" y="-1" dx="1" dy="1" layer="1"/>
 <wire x1="-1.75" y1="1.775" x2="1.75" y2="1.775" width="0.127" layer="51"/>
 <wire x1="1.75" y1="1.775" x2="1.75" y2="-1.775" width="0.127" layer="51"/>
 <wire x1="1.75" y1="-1.775" x2="-1.75" y2="-1.775" width="0.127" layer="51"/>
@@ -8418,18 +8418,16 @@ J-Bend SMD version434153017835</description>
 <wire x1="1.75" y1="-1.77" x2="1.75" y2="-1.46" width="0.127" layer="21"/>
 <text x="-3" y="2.75" size="1.27" layer="25">&gt;Name</text>
 <text x="-3" y="-3.5" size="1.27" layer="27">&gt;Value</text>
-<pad name="5" x="-2.025" y="-0.8" drill="0.65" diameter="0.78" stop="no"/>
-<pad name="6" x="2.025" y="-0.8" drill="0.65" diameter="0.78" stop="no"/>
-<polygon width="0.127" layer="39">
-<vertex x="-3" y="2.025"/>
-<vertex x="3.25" y="2.025"/>
-<vertex x="3.25" y="-2.025"/>
-<vertex x="-3" y="-2.025"/>
-</polygon>
 <text x="-0.85" y="0.4" size="0.8128" layer="48">1</text>
 <text x="0.35" y="0.4" size="0.8128" layer="48">2</text>
 <text x="-0.85" y="-1.1" size="0.8128" layer="48">3</text>
 <text x="0.35" y="-1" size="0.8128" layer="48">4</text>
+<circle x="0" y="1.375" radius="0.375" width="0.127" layer="46"/>
+<circle x="0" y="-1.375" radius="0.375" width="0.127" layer="46"/>
+<wire x1="-3.81" y1="2.54" x2="-3.81" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="-2.54" x2="3.81" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="3.81" y1="-2.54" x2="3.81" y2="2.54" width="0.127" layer="21"/>
+<wire x1="3.81" y1="2.54" x2="-3.81" y2="2.54" width="0.127" layer="21"/>
 </package>
 <package name="418121270802">
 <smd name="1" x="-1.27" y="-4.4" dx="1.1" dy="2.2" layer="1"/>
@@ -19731,8 +19729,8 @@ Details see: &lt;a href="http://katalog.we-online.de/em/datasheet/434331013822.p
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3 5"/>
-<connect gate="G$1" pin="4" pad="4 6"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
 </connects>
 <technologies>
 <technology name=""/>
