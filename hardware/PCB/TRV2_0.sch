@@ -13552,10 +13552,7 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
-</class>
-<class number="1" name="supply" width="0.5" drill="0">
-<clearance class="1" value="0.2032"/>
+<class number="0" name="default" width="0.000253125" drill="0">
 </class>
 </classes>
 <parts>
