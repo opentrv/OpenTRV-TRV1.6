@@ -13559,7 +13559,7 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 </class>
 </classes>
 <parts>
-<part name="IC2" library="SHT21" deviceset="SHT21" device=""/>
+<part name="IC2" library="SHT21" deviceset="SHT21" device="" value="IC2"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="IC1" library="TMP112" deviceset="TMP112" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
@@ -13632,10 +13632,6 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 <part name="GND8" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="R3" library="resistor" deviceset="R-EU_" device="R0603" value="24K"/>
 <part name="GND14" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="R4" library="resistor" deviceset="R-EU_" device="R0603" value="3K"/>
-<part name="R15" library="resistor" deviceset="R-EU_" device="R0603" value="1K"/>
-<part name="GND15" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="C3" library="resistor" deviceset="C-EU" device="C0603" value="2.2uF"/>
 <part name="R16" library="resistor" deviceset="R-EU_" device="R0603" value="4.3K"/>
 <part name="GND18" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="C5" library="resistor" deviceset="C-EU" device="C0603" value="0.1uF"/>
@@ -13648,6 +13644,8 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 <sheets>
 <sheet>
 <plain>
+<text x="26.67" y="252.476" size="1.778" layer="95">IC2</text>
+<text x="26.162" y="225.044" size="1.778" layer="95">IC1</text>
 </plain>
 <instances>
 <instance part="IC2" gate="G$1" x="27.94" y="241.3"/>
@@ -13726,23 +13724,13 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 <attribute name="NAME" x="318.9986" y="171.45" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="319.278" y="176.53" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="GND14" gate="1" x="314.96" y="182.88" rot="R270"/>
-<instance part="R4" gate="G$1" x="302.26" y="177.8" smashed="yes">
-<attribute name="NAME" x="303.53" y="179.2986" size="1.778" layer="95"/>
-<attribute name="VALUE" x="298.45" y="179.578" size="1.778" layer="96"/>
-</instance>
-<instance part="R15" gate="G$1" x="289.56" y="177.8" smashed="yes">
-<attribute name="NAME" x="290.83" y="179.2986" size="1.778" layer="95"/>
-<attribute name="VALUE" x="285.75" y="179.578" size="1.778" layer="96"/>
-</instance>
-<instance part="GND15" gate="1" x="276.86" y="177.8" rot="R270"/>
-<instance part="C3" gate="G$1" x="297.18" y="190.5" rot="R270"/>
+<instance part="GND14" gate="1" x="320.04" y="182.88" rot="R90"/>
 <instance part="R16" gate="G$1" x="287.02" y="160.02" smashed="yes">
 <attribute name="NAME" x="288.29" y="161.5186" size="1.778" layer="95"/>
 <attribute name="VALUE" x="283.21" y="161.798" size="1.778" layer="96"/>
 </instance>
 <instance part="GND18" gate="1" x="276.86" y="160.02" rot="R270"/>
-<instance part="C5" gate="G$1" x="266.7" y="132.08"/>
+<instance part="C5" gate="G$1" x="281.94" y="170.18" rot="R90"/>
 <instance part="C12" gate="G$1" x="261.62" y="152.4" rot="R90"/>
 <instance part="C13" gate="G$1" x="261.62" y="165.1" rot="R90"/>
 <instance part="U$1" gate="G$1" x="205.74" y="246.38"/>
@@ -13886,17 +13874,18 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 <junction x="284.48" y="144.78"/>
 <wire x1="281.94" y1="144.78" x2="266.7" y2="144.78" width="0.1524" layer="91"/>
 <junction x="281.94" y="144.78"/>
-<pinref part="C5" gate="G$1" pin="1"/>
-<wire x1="266.7" y1="144.78" x2="266.7" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="C12" gate="G$1" pin="2"/>
 <wire x1="266.7" y1="144.78" x2="266.7" y2="152.4" width="0.1524" layer="91"/>
-<junction x="266.7" y="144.78"/>
 <pinref part="C13" gate="G$1" pin="2"/>
 <wire x1="266.7" y1="152.4" x2="266.7" y2="165.1" width="0.1524" layer="91"/>
 <junction x="266.7" y="152.4"/>
 <label x="264.16" y="175.26" size="1.778" layer="95"/>
-<wire x1="266.7" y1="165.1" x2="266.7" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="266.7" y1="165.1" x2="266.7" y2="170.18" width="0.1524" layer="91"/>
 <junction x="266.7" y="165.1"/>
+<pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="266.7" y1="170.18" x2="266.7" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="279.4" y1="170.18" x2="266.7" y2="170.18" width="0.1524" layer="91"/>
+<junction x="266.7" y="170.18"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -14058,15 +14047,6 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 <wire x1="317.5" y1="177.8" x2="317.5" y2="182.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R15" gate="G$1" pin="1"/>
-<pinref part="GND15" gate="1" pin="GND"/>
-<wire x1="279.4" y1="177.8" x2="284.48" y2="177.8" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="2"/>
-<wire x1="292.1" y1="190.5" x2="284.48" y2="190.5" width="0.1524" layer="91"/>
-<wire x1="284.48" y1="190.5" x2="284.48" y2="177.8" width="0.1524" layer="91"/>
-<junction x="284.48" y="177.8"/>
-</segment>
-<segment>
 <pinref part="R16" gate="G$1" pin="1"/>
 <pinref part="GND18" gate="1" pin="GND"/>
 <wire x1="279.4" y1="160.02" x2="281.94" y2="160.02" width="0.1524" layer="91"/>
@@ -14155,26 +14135,19 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 </net>
 <net name="MC" class="0">
 <segment>
-<pinref part="IC4" gate="G$1" pin="COL"/>
-<pinref part="R14" gate="G$1" pin="1"/>
-<wire x1="127" y1="238.76" x2="129.54" y2="238.76" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="238.76" x2="129.54" y2="241.3" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="238.76" x2="137.16" y2="238.76" width="0.1524" layer="91"/>
-<junction x="129.54" y="238.76"/>
-<label x="137.16" y="238.76" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U1" gate="A" pin="VPROPI"/>
 <wire x1="304.8" y1="144.78" x2="304.8" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="304.8" y1="154.94" x2="292.1" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="154.94" x2="297.18" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="R16" gate="G$1" pin="2"/>
+<wire x1="297.18" y1="154.94" x2="292.1" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="154.94" x2="292.1" y2="160.02" width="0.1524" layer="91"/>
-<label x="297.18" y="157.48" size="1.778" layer="95"/>
+<label x="297.942" y="162.052" size="1.778" layer="95"/>
+<wire x1="297.18" y1="154.94" x2="297.18" y2="162.56" width="0.1524" layer="91"/>
+<junction x="297.18" y="154.94"/>
 </segment>
 <segment>
-<pinref part="IC5" gate="1" pin="ANALOG_6"/>
-<wire x1="152.4" y1="86.36" x2="160.02" y2="86.36" width="0.1524" layer="91"/>
-<label x="154.94" y="86.36" size="1.778" layer="95"/>
+<wire x1="152.4" y1="83.82" x2="160.02" y2="83.82" width="0.1524" layer="91"/>
+<label x="154.94" y="83.82" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IO_POWER_UP" class="0">
@@ -14203,9 +14176,8 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 </segment>
 <segment>
 <pinref part="U1" gate="A" pin="NSLEEP"/>
-<wire x1="299.72" y1="165.1" x2="307.34" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="307.34" y1="165.1" x2="307.34" y2="144.78" width="0.1524" layer="91"/>
-<label x="289.56" y="165.1" size="1.778" layer="95"/>
+<wire x1="307.34" y1="172.72" x2="307.34" y2="144.78" width="0.1524" layer="91"/>
+<label x="297.18" y="172.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="POT" class="0">
@@ -14299,6 +14271,20 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 <pinref part="R13" gate="G$1" pin="1"/>
 <wire x1="43.18" y1="147.32" x2="50.8" y2="147.32" width="0.1524" layer="91"/>
 <label x="50.8" y="147.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC4" gate="G$1" pin="COL"/>
+<pinref part="R14" gate="G$1" pin="1"/>
+<wire x1="127" y1="238.76" x2="129.54" y2="238.76" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="238.76" x2="129.54" y2="241.3" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="238.76" x2="137.16" y2="238.76" width="0.1524" layer="91"/>
+<junction x="129.54" y="238.76"/>
+<label x="137.16" y="238.76" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC5" gate="1" pin="ANALOG_6"/>
+<wire x1="152.4" y1="86.36" x2="160.02" y2="86.36" width="0.1524" layer="91"/>
+<label x="154.94" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SPI_MOSI" class="0">
@@ -14582,41 +14568,14 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 <wire x1="317.5" y1="144.78" x2="317.5" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$14" class="0">
-<segment>
-<pinref part="R4" gate="G$1" pin="1"/>
-<pinref part="R15" gate="G$1" pin="2"/>
-<wire x1="297.18" y1="177.8" x2="294.64" y2="177.8" width="0.1524" layer="91"/>
-<wire x1="294.64" y1="177.8" x2="294.64" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="294.64" y1="170.18" x2="312.42" y2="170.18" width="0.1524" layer="91"/>
-<junction x="294.64" y="177.8"/>
-<pinref part="U1" gate="A" pin="LDOFB"/>
-<wire x1="312.42" y1="170.18" x2="312.42" y2="144.78" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$15" class="0">
-<segment>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="307.34" y1="177.8" x2="307.34" y2="187.96" width="0.1524" layer="91"/>
-<wire x1="307.34" y1="187.96" x2="327.66" y2="187.96" width="0.1524" layer="91"/>
-<wire x1="327.66" y1="187.96" x2="327.66" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="327.66" y1="55.88" x2="307.34" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="U1" gate="A" pin="LDOOUT"/>
-<wire x1="307.34" y1="55.88" x2="307.34" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="307.34" y1="73.66" x2="304.8" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="299.72" y1="190.5" x2="299.72" y2="187.96" width="0.1524" layer="91"/>
-<wire x1="299.72" y1="187.96" x2="307.34" y2="187.96" width="0.1524" layer="91"/>
-<junction x="307.34" y="187.96"/>
-</segment>
-</net>
 <net name="N$20" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="VCP"/>
-<wire x1="314.96" y1="144.78" x2="314.96" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="314.96" y1="124.46" x2="266.7" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="314.96" y1="144.78" x2="314.96" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="314.96" y1="182.88" x2="294.64" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="294.64" y1="182.88" x2="294.64" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="266.7" y1="124.46" x2="266.7" y2="127" width="0.1524" layer="91"/>
+<wire x1="294.64" y1="170.18" x2="287.02" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
