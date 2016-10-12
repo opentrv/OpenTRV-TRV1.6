@@ -14578,6 +14578,36 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 <wire x1="294.64" y1="170.18" x2="287.02" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="ML" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="IN1H"/>
+<wire x1="299.72" y1="144.78" x2="299.72" y2="151.13" width="0.1524" layer="91"/>
+<pinref part="U1" gate="A" pin="IN2L"/>
+<wire x1="299.72" y1="151.13" x2="292.1" y2="151.13" width="0.1524" layer="91"/>
+<wire x1="292.1" y1="151.13" x2="292.1" y2="144.78" width="0.1524" layer="91"/>
+<label x="294.64" y="151.892" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC5" gate="1" pin="ANALOG_2"/>
+<wire x1="152.4" y1="96.52" x2="160.02" y2="96.52" width="0.1524" layer="91"/>
+<label x="157.48" y="96.52" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="MR" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="IN1L"/>
+<wire x1="294.64" y1="144.78" x2="294.64" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="U1" gate="A" pin="IN2H"/>
+<wire x1="294.64" y1="147.32" x2="297.18" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="297.18" y1="147.32" x2="297.18" y2="144.78" width="0.1524" layer="91"/>
+<label x="294.64" y="148.336" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC5" gate="1" pin="ANALOG_3"/>
+<wire x1="152.4" y1="93.98" x2="160.02" y2="93.98" width="0.1524" layer="91"/>
+<label x="157.48" y="93.98" size="1.778" layer="95"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>

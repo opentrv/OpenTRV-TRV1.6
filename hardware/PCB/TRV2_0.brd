@@ -3774,6 +3774,20 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 <contactref element="C5" pad="2"/>
 <wire x1="11.8874" y1="44.97" x2="14.39" y2="53.34" width="0" layer="19" extent="1-1"/>
 </signal>
+<signal name="ML">
+<contactref element="U1" pad="5"/>
+<contactref element="U1" pad="8"/>
+<contactref element="IC5" pad="25"/>
+<wire x1="8.4326" y1="44.97" x2="8.4326" y2="46.47" width="0" layer="19" extent="1-1"/>
+<wire x1="13.06360625" y1="25.941603125" x2="8.4326" y2="44.97" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="MR">
+<contactref element="U1" pad="6"/>
+<contactref element="U1" pad="7"/>
+<contactref element="IC5" pad="26"/>
+<wire x1="8.4326" y1="45.47" x2="8.4326" y2="45.97" width="0" layer="19" extent="1-1"/>
+<wire x1="12.26360625" y1="25.941603125" x2="8.4326" y2="45.47" width="0" layer="19" extent="1-1"/>
+</signal>
 </signals>
 </board>
 </drawing>
