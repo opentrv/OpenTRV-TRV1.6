@@ -14145,6 +14145,7 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 <segment>
 <wire x1="152.4" y1="83.82" x2="160.02" y2="83.82" width="0.1524" layer="91"/>
 <label x="154.94" y="83.82" size="1.778" layer="95"/>
+<pinref part="IC5" gate="1" pin="ANALOG_7"/>
 </segment>
 </net>
 <net name="IO_POWER_UP" class="0">
