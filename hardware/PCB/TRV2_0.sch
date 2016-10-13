@@ -14609,6 +14609,34 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,91.44,45.72,IC5,GND1,GND,,,"/>
+<approved hash="104,1,91.44,73.66,IC5,VCC1,VCC,,,"/>
+<approved hash="104,1,91.44,50.8,IC5,GND/ANALOG,GND,,,"/>
+<approved hash="104,1,91.44,71.12,IC5,VCC2,VCC,,,"/>
+<approved hash="104,1,91.44,43.18,IC5,GND2,GND,,,"/>
+<approved hash="202,1,312.42,144.78,U1,LDOFB,,,,"/>
+<approved hash="202,1,309.88,144.78,U1,LDOEN,,,,"/>
+<approved hash="104,1,287.02,144.78,U1,VCC_2,VCC,,,"/>
+<approved hash="104,1,284.48,144.78,U1,VCC_3,VCC,,,"/>
+<approved hash="104,1,309.88,73.66,U1,GND_2,GND,,,"/>
+<approved hash="104,1,312.42,73.66,U1,GND_3,GND,,,"/>
+<approved hash="104,1,314.96,73.66,U1,GND_4,GND,,,"/>
+<approved hash="106,1,226.06,147.32,ANT,,,,,"/>
+<approved hash="206,1,289.56,73.66,N$2,,,,,"/>
+<approved hash="206,1,292.1,73.66,N$2,,,,,"/>
+<approved hash="206,1,294.64,73.66,N$2,,,,,"/>
+<approved hash="206,1,297.18,73.66,N$11,,,,,"/>
+<approved hash="206,1,299.72,73.66,N$11,,,,,"/>
+<approved hash="206,1,302.26,73.66,N$11,,,,,"/>
+<approved hash="106,1,226.06,165.1,RFVCC,,,,,"/>
+<approved hash="113,1,290.885,215.9,SW1,,,,,"/>
+<approved hash="113,1,340.36,234.755,J1,,,,,"/>
+<approved hash="113,1,33.2571,17.9112,J2,,,,,"/>
+<approved hash="113,1,194.206,131.976,FRAME2,,,,,"/>
+<approved hash="113,1,302.391,53.1029,J3,,,,,"/>
+<approved hash="113,1,228.642,154.745,J4,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
