@@ -11284,7 +11284,6 @@ W = angled&lt;p&gt;
 <pad name="14" x="7.62" y="1.27" drill="1.016" shape="octagon"/>
 <text x="-8.128" y="-4.191" size="1.27" layer="21" ratio="10">1</text>
 <text x="-8.89" y="2.921" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="6.477" y="2.921" size="1.27" layer="21" ratio="10">14</text>
 <text x="-2.54" y="-4.191" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <rectangle x1="-5.334" y1="-1.524" x2="-4.826" y2="-1.016" layer="51"/>
 <rectangle x1="-7.874" y1="-1.524" x2="-7.366" y2="-1.016" layer="51"/>
@@ -14617,6 +14616,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="279.4" y1="170.18" x2="266.7" y2="170.18" width="0.1524" layer="91"/>
 <junction x="266.7" y="170.18"/>
 </segment>
+<segment>
+<wire x1="226.06" y1="165.1" x2="223.52" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="165.1" x2="223.52" y2="175.26" width="0.1524" layer="91"/>
+<label x="223.52" y="175.26" size="1.778" layer="95"/>
+<pinref part="J4" gate="1" pin="1"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -15092,14 +15097,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="223.52" y1="147.32" x2="223.52" y2="139.7" width="0.1524" layer="91"/>
 <label x="223.52" y="139.7" size="1.778" layer="95" rot="R180"/>
 <pinref part="J4" gate="1" pin="8"/>
-</segment>
-</net>
-<net name="RFVCC" class="0">
-<segment>
-<wire x1="226.06" y1="165.1" x2="223.52" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="223.52" y1="165.1" x2="223.52" y2="175.26" width="0.1524" layer="91"/>
-<label x="223.52" y="175.26" size="1.778" layer="95"/>
-<pinref part="J4" gate="1" pin="1"/>
 </segment>
 </net>
 <net name="BUTTON_MODE_L" class="0">
