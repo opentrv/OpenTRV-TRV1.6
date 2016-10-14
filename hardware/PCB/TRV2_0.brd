@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.003125" unitdist="mic" unit="mm" style="lines" multiple="1" display="no" altdistance="0.003125" altunitdist="mic" altunit="mm"/>
+<grid distance="0.05" unitdist="inch" unit="mm" style="lines" multiple="1" display="no" altdistance="0.003125" altunitdist="mic" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -144,7 +144,7 @@
 <wire x1="46" y1="0" x2="46" y2="70" width="0" layer="20"/>
 <wire x1="46" y1="70" x2="0" y2="70" width="0" layer="20"/>
 <wire x1="0" y1="70" x2="0" y2="0" width="0" layer="20"/>
-<text x="6.0325" y="32.7025" size="0.8128" layer="25" rot="R180">IC2</text>
+<text x="1.480921875" y="35.26" size="0.8128" layer="25" rot="R270">IC2</text>
 <rectangle x1="12.76201875" y1="46.603265625" x2="13.55576875" y2="47.238265625" layer="1"/>
 <rectangle x1="12.76201875" y1="47.2458" x2="13.55576875" y2="47.8808" layer="1"/>
 <rectangle x1="12.76201875" y1="48.089475" x2="13.55576875" y2="48.724475" layer="1"/>
@@ -3237,7 +3237,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </autorouter>
 <elements>
 <element name="C1" library="rcl" package="C0603" value="100N" x="7.5184" y="34.3408" locked="yes" smashed="yes" rot="R270">
-<attribute name="NAME" x="8.7249" y="36.9443" size="0.8128" layer="25" rot="R180"/>
+<attribute name="NAME" x="8.477459375" y="37.0218" size="0.8128" layer="25" rot="R180"/>
 </element>
 <element name="C10" library="rcl" package="C0603" value="100N" x="18.0142125" y="21.202396875" locked="yes" smashed="yes">
 <attribute name="NAME" x="17.0617125" y="22.472396875" size="0.8128" layer="25"/>
@@ -3249,7 +3249,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="NAME" x="1.361415625" y="21.4091" size="0.8128" layer="25" rot="R90"/>
 </element>
 <element name="C17" library="rcl" package="C0603" value="0p" x="3.8608" y="15.8496" locked="yes" smashed="yes">
-<attribute name="NAME" x="2.9083" y="13.9446" size="0.8128" layer="25"/>
+<attribute name="NAME" x="1.936734375" y="14.9567375" size="0.8128" layer="25" rot="R90"/>
 </element>
 <element name="C2" library="rcl" package="C0603" value="100N" x="6.2992" y="38.8112" locked="yes" smashed="yes" rot="R270">
 <attribute name="NAME" x="8.3058" y="38.0238" size="0.8128" layer="25" rot="R90"/>
@@ -3293,7 +3293,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="NAME" x="19.433996875" y="53.61" size="0.8128" layer="26" ratio="10" rot="MR180"/>
 </element>
 <element name="IC5" library="Arduino-AVR" package="TQFP32-08" value="ATMEGA8-AU" x="10.26360625" y="21.649003125" locked="yes" smashed="yes">
-<attribute name="NAME" x="10.03500625" y="21.649003125" size="0.8128" layer="25"/>
+<attribute name="NAME" x="9.182378125" y="22.211815625" size="0.8128" layer="25"/>
 </element>
 <element name="J1" library="con-lstb" package="MA07-2" value="" x="20.4216" y="7.366" locked="yes" smashed="yes">
 <attribute name="MF" value="" x="20.4216" y="7.366" size="1.778" layer="27" display="off"/>
@@ -3327,10 +3327,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="NAME" x="37.7825" y="6.096" size="0.8128" layer="25" rot="R90"/>
 </element>
 <element name="R2" library="resistor" package="R0603" value="4K7" x="8.3312" y="12.5984" locked="yes" smashed="yes" rot="R270">
-<attribute name="NAME" x="7.7216" y="14.3637" size="0.8128" layer="25"/>
+<attribute name="NAME" x="7.0438875" y="12.0300375" size="0.8128" layer="25" rot="R90"/>
 </element>
 <element name="R21" library="resistor" package="R0603" value="47R" x="22.7584" y="43.0784" locked="yes" smashed="yes" rot="R90">
-<attribute name="NAME" x="23.9141" y="43.9166" size="0.8128" layer="25" rot="R270"/>
+<attribute name="NAME" x="20.684134375" y="44.063159375" size="0.8128" layer="25" rot="R270"/>
 </element>
 <element name="R22" library="resistor" package="R0603" value="1R0" x="18.0142125" y="17.951196875" locked="yes" smashed="yes" rot="R180">
 <attribute name="NAME" x="19.2842125" y="16.681196875" size="0.8128" layer="25" rot="R180"/>
@@ -3661,13 +3661,63 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </polygon>
 <via x="18.415" y="34.29" extent="1-16" drill="0.6"/>
 <via x="14.605" y="28.321" extent="1-16" drill="0.6"/>
-<via x="29.845" y="5.461" extent="1-16" drill="0.6"/>
+<via x="30.335940625" y="5.334059375" extent="1-16" drill="0.6"/>
 <via x="3.81" y="32.385" extent="1-16" drill="0.6"/>
 <via x="10.795" y="38.735" extent="1-16" drill="0.6"/>
 <via x="25.299828125" y="33.386475" extent="1-16" drill="0.6"/>
 <via x="17.78" y="28.067" extent="1-16" drill="0.6"/>
 <wire x1="4.75120625" y1="38.2176" x2="6.2992" y2="38.2176" width="0.2032" layer="1"/>
 <wire x1="6.2992" y1="38.2176" x2="6.2992" y2="37.9612" width="0.4064" layer="1"/>
+<via x="35.7165625" y="60.92541875" extent="1-16" drill="0.6"/>
+<via x="35.797725" y="56.660765625" extent="1-16" drill="0.6"/>
+<via x="35.8203625" y="52.0790875" extent="1-16" drill="0.6"/>
+<via x="31.278121875" y="54.0701625" extent="1-16" drill="0.6"/>
+<via x="35.71200625" y="48.00714375" extent="1-16" drill="0.6"/>
+<via x="35.70523125" y="43.640371875" extent="1-16" drill="0.6"/>
+<via x="35.63750625" y="39.070153125" extent="1-16" drill="0.6"/>
+<via x="32.2379375" y="38.939884375" extent="1-16" drill="0.6"/>
+<via x="28.178821875" y="43.4631125" extent="1-16" drill="0.6"/>
+<via x="24.110271875" y="41.96135625" extent="1-16" drill="0.6"/>
+<via x="26.858509375" y="37.218353125" extent="1-16" drill="0.6"/>
+<via x="26.924534375" y="34.83234375" extent="1-16" drill="0.6"/>
+<via x="32.15085625" y="34.518953125" extent="1-16" drill="0.6"/>
+<via x="35.527440625" y="34.652621875" extent="1-16" drill="0.6"/>
+<via x="32.10755625" y="30.478253125" extent="1-16" drill="0.6"/>
+<via x="36.743740625" y="30.43901875" extent="1-16" drill="0.6"/>
+<via x="43.702059375" y="12.615459375" extent="1-16" drill="0.6"/>
+<wire x1="33.485203125" y1="10.060121875" x2="33.485203125" y2="10.060121875" width="0" layer="19" extent="1-16"/>
+<wire x1="37.329309375" y1="6.33808125" x2="37.329309375" y2="6.33808125" width="0" layer="19" extent="1-16"/>
+<via x="39.94780625" y="6.2553375" extent="1-16" drill="0.6"/>
+<via x="23.7337625" y="10.61684375" extent="1-16" drill="0.6"/>
+<via x="20.531971875" y="4.180421875" extent="1-16" drill="0.6"/>
+<via x="16.224159375" y="3.848103125" extent="1-16" drill="0.6"/>
+<via x="2.4530875" y="8.574228125" extent="1-16" drill="0.6"/>
+<via x="3.038271875" y="7.4826625" extent="1-16" drill="0.6"/>
+<via x="2.780709375" y="5.48315625" extent="1-16" drill="0.6"/>
+<via x="2.93293125" y="14.40289375" extent="1-16" drill="0.6"/>
+<via x="9.592915625" y="15.3272" extent="1-16" drill="0.6"/>
+<via x="8.52755625" y="14.876121875" extent="1-16" drill="0.6"/>
+<via x="8.094284375" y="22.0566875" extent="1-16" drill="0.6"/>
+<via x="8.66765625" y="23.882421875" extent="1-16" drill="0.6"/>
+<via x="14.554984375" y="25.91950625" extent="1-16" drill="0.6"/>
+<via x="12.64094375" y="22.530296875" extent="1-16" drill="0.6"/>
+<via x="19.546509375" y="23.08603125" extent="1-16" drill="0.6"/>
+<via x="5.1498625" y="29.906253125" extent="1-16" drill="0.6"/>
+<via x="4.108025" y="27.8471" extent="1-16" drill="0.6"/>
+<via x="4.97995" y="25.60586875" extent="1-16" drill="0.6"/>
+<via x="4.862903125" y="17.351821875" extent="1-16" drill="0.6"/>
+<via x="17.7169625" y="15.150215625" extent="1-16" drill="0.6"/>
+<via x="5.92226875" y="32.266821875" extent="1-16" drill="0.6"/>
+<via x="6.68294375" y="36.69413125" extent="1-16" drill="0.6"/>
+<wire x1="8.14590625" y1="39.875765625" x2="8.14590625" y2="39.875765625" width="0" layer="19" extent="1-16"/>
+<via x="18.902465625" y="41.336953125" extent="1-16" drill="0.6"/>
+<via x="8.865171875" y="36.511621875" extent="1-16" drill="0.6"/>
+<wire x1="9.63164375" y1="32.69780625" x2="9.63164375" y2="32.69780625" width="0" layer="19" extent="1-16"/>
+<via x="6.93210625" y="57.289828125" extent="1-16" drill="0.6"/>
+<via x="22.879778125" y="60.728040625" extent="1-16" drill="0.6"/>
+<via x="8.798390625" y="64.746703125" extent="1-16" drill="0.6"/>
+<via x="6.78496875" y="65.6578375" extent="1-16" drill="0.6"/>
+<via x="8.42350625" y="65.942903125" extent="1-16" drill="0.6"/>
 </signal>
 <signal name="SCL">
 <contactref element="IC2" pad="6"/>
@@ -4566,56 +4616,56 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </signal>
 </signals>
 <errors>
-<approved hash="5,1,3f5dc5c12ff5ea75"/>
-<approved hash="5,1,32ecc5e32fd9e7ca"/>
-<approved hash="5,1,a17c0c19fc795c9c"/>
+<approved hash="5,1,360ec4272e1de328"/>
+<approved hash="5,1,ae5a0777f757507a"/>
+<approved hash="19,1,900dcebc94950f71"/>
+<approved hash="5,1,0ea3c5d92ff9db9f"/>
 <approved hash="5,1,3581c5d92ffde0b9"/>
+<approved hash="5,1,a9cb04e4f4c457eb"/>
+<approved hash="5,1,32ecc5e32fd9e7ca"/>
+<approved hash="5,1,3f5dc5c12ff5ea75"/>
+<approved hash="5,1,a17c0c19fc795c9c"/>
 <approved hash="5,1,0b10c5db2fd9de0e"/>
+<approved hash="5,1,aced0186f1e6520d"/>
 <approved hash="5,1,ab383b597079ee58"/>
 <approved hash="19,1,bbc72a2d10114aac"/>
 <approved hash="5,1,150bbba8fe885eeb"/>
-<approved hash="5,1,aced0186f1e6520d"/>
-<approved hash="5,1,360ec4272e1de328"/>
-<approved hash="5,1,a9cb04e4f4c457eb"/>
-<approved hash="19,1,900dcebc94950f71"/>
-<approved hash="5,1,ae5a0777f757507a"/>
-<approved hash="5,1,0ea3c5d92ff9db9f"/>
 <approved hash="5,1,abde9318ad52969b"/>
 <approved hash="19,1,bde9e17e55e7b17b"/>
 <approved hash="19,1,64d220a69e565920"/>
-<approved hash="5,1,12d0bdb543d5e130"/>
+<approved hash="5,1,1b148ab5cf955074"/>
+<approved hash="5,1,19a7b5084b28e987"/>
+<approved hash="5,1,1e36b69b48bbee16"/>
 <approved hash="5,1,a5a70a444164e047"/>
 <approved hash="5,1,1c41b02a4e4aeca1"/>
-<approved hash="5,1,1b148ab5cf955074"/>
-<approved hash="5,1,1e36b69b48bbee16"/>
-<approved hash="5,1,19a7b5084b28e987"/>
-<approved hash="5,1,59cea4216af5ea66"/>
-<approved hash="5,1,59cb3547c941bf68"/>
-<approved hash="19,1,4a2132938e6d77f2"/>
-<approved hash="19,1,95e86bab5f40202c"/>
-<approved hash="5,1,b1166db9d86469b5"/>
-<approved hash="19,1,e9c791f5550bac14"/>
-<approved hash="19,1,24ce5f2056b0ac1d"/>
-<approved hash="19,1,ce4f370ccbe7b387"/>
+<approved hash="5,1,12d0bdb543d5e130"/>
 <approved hash="5,1,6830a4396af9db8c"/>
 <approved hash="5,1,6d83a43b6ad9de1d"/>
+<approved hash="19,1,e9c791f5550bac14"/>
 <approved hash="5,1,5312a4396afde0aa"/>
 <approved hash="5,1,509da5c76b1de33b"/>
-<approved hash="19,1,9abc64d0153b6a52"/>
 <approved hash="5,1,fd0415f21c12f4e8"/>
-<approved hash="19,1,d89f99060bf100ce"/>
-<approved hash="19,1,a887a5c6bc88c1ba"/>
-<approved hash="19,1,18d28919f88f9afa"/>
-<approved hash="19,1,11ee00f24861b34b"/>
-<approved hash="19,1,ee9e0b0e36ba06fe"/>
-<approved hash="19,1,d2cab6c9c2769cd1"/>
-<approved hash="5,1,f714804f0bbb7d96"/>
-<approved hash="5,1,3da54facc77aba0e"/>
-<approved hash="19,1,1b6a798bd5e9cb6b"/>
+<approved hash="19,1,9abc64d0153b6a52"/>
+<approved hash="5,1,59cea4216af5ea66"/>
+<approved hash="19,1,95e86bab5f40202c"/>
+<approved hash="5,1,b1166db9d86469b5"/>
+<approved hash="19,1,ce4f370ccbe7b387"/>
+<approved hash="19,1,24ce5f2056b0ac1d"/>
+<approved hash="19,1,4a2132938e6d77f2"/>
+<approved hash="5,1,59cb3547c941bf68"/>
 <approved hash="19,1,8d1109183378867e"/>
 <approved hash="19,1,b09a91dd829991d3"/>
 <approved hash="19,1,ffac5e0d9bcbd1e4"/>
 <approved hash="19,1,d34a54ad66b518db"/>
+<approved hash="5,1,f714804f0bbb7d96"/>
+<approved hash="19,1,d2cab6c9c2769cd1"/>
+<approved hash="5,1,3da54facc77aba0e"/>
+<approved hash="19,1,1b6a798bd5e9cb6b"/>
+<approved hash="19,1,d89f99060bf100ce"/>
+<approved hash="19,1,a887a5c6bc88c1ba"/>
+<approved hash="19,1,18d28919f88f9afa"/>
+<approved hash="19,1,ee9e0b0e36ba06fe"/>
+<approved hash="19,1,11ee00f24861b34b"/>
 <approved hash="19,1,80a55335d7221b39"/>
 <approved hash="19,1,c648a82a574fc399"/>
 <approved hash="19,1,8cda755df55d34da"/>
