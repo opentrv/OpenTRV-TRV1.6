@@ -13594,7 +13594,7 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 <part name="C9" library="rcl" deviceset="C-EU" device="C0603" value="100N"/>
 <part name="GND23" library="supply1" deviceset="GND" device=""/>
 <part name="IC5" library="Arduino-AVR" deviceset="ATMEGA8" device="-AU"/>
-<part name="Q1" library="crystal" deviceset="FC-12M" device=""/>
+<part name="X1" library="crystal" deviceset="FC-12M" device=""/>
 <part name="C16" library="rcl" deviceset="C-EU" device="C0603" value="0p"/>
 <part name="C17" library="rcl" deviceset="C-EU" device="C0603" value="0p"/>
 <part name="C10" library="rcl" deviceset="C-EU" device="C0603" value="100N"/>
@@ -13633,6 +13633,53 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 <plain>
 <text x="26.67" y="252.476" size="1.778" layer="95">IC2</text>
 <text x="26.162" y="225.044" size="1.778" layer="95">IC1</text>
+<text x="35.56" y="7.62" size="1.778" layer="94" rot="R180">ON BOM (14/10-2016)</text>
+<text x="71.12" y="251.46" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="20.32" y="256.54" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="71.12" y="223.52" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="17.78" y="226.06" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="106.68" y="228.6" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="101.6" y="231.14" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="134.62" y="256.54" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="152.4" y="243.84" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="177.8" y="243.84" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="210.82" y="256.54" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="233.68" y="228.6" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="251.46" y="231.14" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="279.4" y="246.38" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="289.56" y="228.6" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="327.66" y="248.92" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="332.74" y="218.44" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="330.2" y="210.82" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="368.3" y="228.6" size="1.778" layer="94" rot="R90">ON BOM (14/10-2016)</text>
+<text x="22.86" y="182.88" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="22.86" y="154.94" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="35.56" y="149.86" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="104.14" y="185.42" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="238.76" y="167.64" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="254" y="165.1" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="254" y="152.4" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="271.78" y="170.18" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="327.66" y="162.56" size="1.778" layer="94" rot="R90">ON BOM (14/10-2016)</text>
+<text x="274.32" y="162.56" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="88.9" y="109.22" size="1.778" layer="94" rot="R90">ON BOM (14/10-2016)</text>
+<text x="10.16" y="68.58" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="40.64" y="68.58" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="177.8" y="96.52" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="177.8" y="66.04" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="182.88" y="66.04" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="43.18" y="55.88" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="63.5" y="55.88" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="55.88" y="66.04" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="203.2" y="17.78" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="58.42" y="25.4" size="1.778" layer="94" rot="R180">ON BOM (14/10-2016)</text>
+<text x="312.42" y="50.8" size="1.778" layer="94" rot="R180">ON BOM (14/10-2016)</text>
+<text x="83.82" y="182.88" size="1.778" layer="94" rot="R270">ON BOM (14/10-2016)</text>
+<text x="83.82" y="147.32" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="33.02" y="172.72" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="30.48" y="165.1" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="33.02" y="157.48" size="1.778" layer="94">ON BOM (14/10-2016)</text>
+<text x="243.84" y="2.54" size="1.778" layer="94" rot="R90">ON BOM (14/10-2016)</text>
 </plain>
 <instances>
 <instance part="IC2" gate="G$1" x="27.94" y="241.3"/>
@@ -13683,7 +13730,7 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 <instance part="C9" gate="G$1" x="33.02" y="60.96"/>
 <instance part="GND23" gate="1" x="33.02" y="50.8"/>
 <instance part="IC5" gate="1" x="121.92" y="73.66"/>
-<instance part="Q1" gate="G$1" x="66.04" y="63.5"/>
+<instance part="X1" gate="G$1" x="66.04" y="63.5"/>
 <instance part="C16" gate="G$1" x="58.42" y="58.42"/>
 <instance part="C17" gate="G$1" x="73.66" y="58.42"/>
 <instance part="C10" gate="G$1" x="182.88" y="86.36"/>
@@ -14470,7 +14517,7 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="Q1" gate="G$1" pin="1"/>
+<pinref part="X1" gate="G$1" pin="1"/>
 <wire x1="63.5" y1="63.5" x2="58.42" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="C16" gate="G$1" pin="1"/>
 <wire x1="58.42" y1="63.5" x2="58.42" y2="60.96" width="0.1524" layer="91"/>
@@ -14482,7 +14529,7 @@ Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternationa
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="Q1" gate="G$1" pin="2"/>
+<pinref part="X1" gate="G$1" pin="2"/>
 <wire x1="68.58" y1="63.5" x2="73.66" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="C17" gate="G$1" pin="1"/>
 <wire x1="73.66" y1="63.5" x2="73.66" y2="60.96" width="0.1524" layer="91"/>
