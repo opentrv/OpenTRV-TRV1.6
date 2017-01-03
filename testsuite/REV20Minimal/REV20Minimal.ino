@@ -27,7 +27,7 @@ Author(s) / Copyright (s): Deniz Erbilgin 2016
 // Debug output flag
 #define DEBUG
 // REV7 / DORM1 all-in-one valve unit, secure TX.
-//#define CONFIG_DORM1
+#define CONFIG_TRV20_PROTO
 // Get defaults for valve applications.
 #include <OTV0p2_valve_ENABLE_defaults.h>
 // All-in-one valve unit (DORM1).
@@ -64,14 +64,13 @@ extern void _debug_serial_timestamp();
 // OBJECTS & VARIABLES
 /**
  * Peripherals present on REV7
- * - Pot        Set input to Hi-Z?  +
+ * - Pot        Set input to Hi-Z?
  * - PHT        IO_POWER_UP LOW
  * - Encoder    IO_POWER_UP LOW
  * - LED        Set pin HIGH?
  * - Button     Set to INPUT
- * - H-Bridge   Control pins HIGH, Current sense set to input.  +
- * - SHT21      read() once.        +
- * - RFM23B     ??                  +
+ * - H-Bridge   Control pins HIGH, Current sense set to input.
+ * - TMP112     read() once.
  * - XTAL       Setup and leave running?
  * - UART       Disable
  */
@@ -90,34 +89,22 @@ typedef OTV0P2BASE::DummySensorOccupancyTracker OccupancyTracker;
 OTV0P2BASE::SupplyVoltageCentiVolts Supply_cV;
 
 /*
- * Radio instance
+ * TMP112 instance
  */
-static constexpr bool RFM23B_allowRX = false;
- 
-static constexpr uint8_t RFM23B_RX_QUEUE_SIZE = OTRFM23BLink::DEFAULT_RFM23B_RX_QUEUE_CAPACITY;
-static constexpr int8_t RFM23B_IRQ_PIN = -1;// PIN_RFM_NIRQ;
-// XXX Is it really worth having a separate primary radio in this case?
-OTRFM23BLink::OTRFM23BLink<OTV0P2BASE::V0p2_PIN_SPI_nSS, RFM23B_IRQ_PIN, RFM23B_RX_QUEUE_SIZE, RFM23B_allowRX> PrimaryRadio;//RFM23B;
-///* constexpr */ OTRadioLink::OTRadioLink &PrimaryRadio = RFM23B
-// Pick an appropriate radio config for RFM23 (if it is the primary radio).
-// Nodes talking on fast GFSK channel 0.
-static const uint8_t nPrimaryRadioChannels = 1;
-static const OTRadioLink::OTRadioChannelConfig RFM23BConfigs[nPrimaryRadioChannels] = {
-    // GFSK channel 0 full config, RX/TX, not in itself secure.
-    OTRadioLink::OTRadioChannelConfig(OTRFM23BLink::StandardRegSettingsGFSK57600, true), };
+OTV0P2BASE::RoomTemperatureC16_TMP112 TemperatureC16;
 
 /*
- * SHT21 instance
+ * SHT21 instance XXX Disabled
  */
-OTV0P2BASE::RoomTemperatureC16_SHT21 TemperatureC16; // SHT21 impl.
+//OTV0P2BASE::RoomTemperatureC16_SHT21 TemperatureC16; // SHT21 impl.
 
 // HUMIDITY_SENSOR_SUPPORT is defined if at least one humidity sensor has support compiled in.
 // Simple implementations can assume that the sensor will be present if defined;
 // more sophisticated implementations may wish to make run-time checks.
 // If SHT21 support is enabled at compile-time then its humidity sensor may be used at run-time.
-// Singleton implementation/instance.
-typedef OTV0P2BASE::HumiditySensorSHT21 RelHumidity_t;
-RelHumidity_t RelHumidity;
+//// Singleton implementation/instance.
+//typedef OTV0P2BASE::HumiditySensorSHT21 RelHumidity_t;
+//RelHumidity_t RelHumidity;
 
 /**
  * Temp pot
@@ -160,7 +147,7 @@ ValveDirect_t ValveDirect([](){return(AmbLight.isRoomDark());});
 void panic()
 {
     // Reset radio and go into low-power mode.
-    PrimaryRadio.panicShutdown();
+//    PrimaryRadio.panicShutdown();
     // Power down almost everything else...
     OTV0P2BASE::minimisePowerWithoutSleep();
     pinMode(OTV0P2BASE::LED_HEATCALL_L, OUTPUT);
@@ -213,11 +200,6 @@ void setup()
     if(!::OTV0P2BASE::HWTEST::calibrateInternalOscWithExtOsc()) { panic(F("Xtal")); } // Async clock not running or can't tune.
 //    if(!::OTV0P2BASE::HWTEST::check32768HzOsc()) { panic(F("xtal")); } // Async clock not running correctly.
 
-    // Initialise the radio, if configured, ASAP because it can suck a lot of power until properly initialised.
-    PrimaryRadio.preinit(NULL);
-    // Check that the radio is correctly connected; panic if not...
-    if(!PrimaryRadio.configure(nPrimaryRadioChannels, RFM23BConfigs) || !PrimaryRadio.begin()) { panic(F("r1")); }
-
     // Buttons should not be activated DURING boot for user-facing boards; an activated button implies a fault.
     // Check buttons not stuck in the activated position.
     if(fastDigitalRead(BUTTON_MODE_L) == LOW) { panic(F("b")); }
@@ -236,10 +218,11 @@ void setup()
     DEBUG_SERIAL_PRINT_FLASHSTRING("T: ");
     DEBUG_SERIAL_PRINT(heat);
     DEBUG_SERIAL_PRINTLN();
-    const uint8_t rh = RelHumidity.read();
-    DEBUG_SERIAL_PRINT_FLASHSTRING("RH%: ");
-    DEBUG_SERIAL_PRINT(rh);
-    DEBUG_SERIAL_PRINTLN();
+// SHT21 not present by default.
+//    const uint8_t rh = RelHumidity.read();
+//    DEBUG_SERIAL_PRINT_FLASHSTRING("RH%: ");
+//    DEBUG_SERIAL_PRINT(rh);
+//    DEBUG_SERIAL_PRINTLN();
     const int light = AmbLight.read();
     DEBUG_SERIAL_PRINT_FLASHSTRING("L: ");
     DEBUG_SERIAL_PRINT(light);
@@ -255,7 +238,6 @@ void setup()
     OTV0P2BASE::LED_HEATCALL_OFF();
 
     // Do OpenTRV-specific (late) setup.
-    PrimaryRadio.listen(false);
 
     // Long delay after everything set up to allow a non-sleep power measurement.
     delay(10000);
@@ -287,21 +269,4 @@ void loop()
  * 20161111/0e6ec96     REV7:   1.5 (1.1) @ 2.5 V       REV11:  0.45 (0.03) @ 2.5 V
  * 20161111/f2eed5e     REV7:   0.46 (0.04) @ 2.5 V
  */
-
-/**
- * @note    REV7 Power consumption investigation.
- *          Figures are not overly accurate due to hot airgun changing board temp. Shouldn't make enough of a difference for our purposes.
- * Baseline:                1.08 mA
- * - Motor decoupling caps: 1.08 mA
- * - Potentiometer:         1.02 mA
- * - BAV99 Suppressors:     1.02 mA
- * - TANT RF decoupling:    1.01 mA
- * - Motor diodes:          1.01 mA
- * - Op Amp:                0.99 mA
- * - Inductor:              178 mA (I think this is due to ML+MR being held high)
- * - H-Bridge Transistors:  0.99 mA
- * - All decoupling:        0.98 mA
- * - All H-Bridge resistors:0.98 mA
- * - Encoder:               0.98 mA
- * - Some resistors:        0.48 mA
- */
+ 
