@@ -16,21 +16,17 @@ under the Licence.
 Author(s) / Copyright (s): Deniz Erbilgin 2016-2017
 */
 /**
- * Minimal REV7 config for testing power consumption.
- * Aim is to:
- *     - todo init GPIO pins to safe mode.
- *     - todo init peripherals to safe low power mode.
- *     - loop endlessly.
+ * Minimal REV20 config for testing sensor. Repeatedly prints out sensor data to serial.
  */
 
 // INCLUDES & DEFINES
 // Debug output flag
 #define DEBUG
-// REV7 / DORM1 all-in-one valve unit, secure TX.
+// REV20 all-in-one valve unit.
 #define CONFIG_TRV20_PROTO
 // Get defaults for valve applications.
 #include <OTV0p2_valve_ENABLE_defaults.h>
-// All-in-one valve unit (DORM1).
+// All-in-one valve unit (REV20).
 #include <OTV0p2_CONFIG_REV20.h>
 // I/O pin allocation and setup: include ahead of I/O module headers.
 #include <OTV0p2_Board_IO_Config.h>
