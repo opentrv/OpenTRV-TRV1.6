@@ -26,6 +26,6 @@ SKETCH_PATH=$PWD/testsuite  # Path to hardware directory
 
 (
 # Verify REV7 minimal test.
-arduino --verify --board $BUILD_TARGET $SKETCH_PATH/REV20Minimal/
+arduino --verify --board $BUILD_TARGET $SKETCH_PATH/REV20Minimal/REV20Minimal.ino
 
 )
