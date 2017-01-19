@@ -18,8 +18,6 @@
 # NOTE!!! Arduino IDE requires an X server to run, even in CLI mode.
 # See https://github.com/arduino/Arduino/blob/master/build/shared/manpage.adoc#bugs for instructions on how to set up a dummy X server in Linux.
 
-echo "start test"
-
 BUILD_TARGET=opentrv:avr:opentrv_v0p2  # Target board to build for.
 SKETCH_PATH=$PWD/testsuite  # Path to hardware directory
 
