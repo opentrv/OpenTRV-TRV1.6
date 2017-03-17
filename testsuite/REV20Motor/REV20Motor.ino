@@ -13,20 +13,24 @@ KIND, either express or implied. See the Licence for the
 specific language governing permissions and limitations
 under the Licence.
 
-Author(s) / Copyright (s): Deniz Erbilgin 2016-2017
+Author(s) / Copyright (s): Deniz Erbilgin 2017
 */
 /**
- * Minimal REV20 config for testing sensor. Repeatedly prints out sensor data to serial.
+ * Minimal REV7 config for testing power consumption.
+ * Aim is to:
+ *     - todo init GPIO pins to safe mode.
+ *     - todo init peripherals to safe low power mode.
+ *     - loop endlessly.
  */
 
 // INCLUDES & DEFINES
 // Debug output flag
 #define DEBUG
-// REV20 all-in-one valve unit.
+// REV7 / DORM1 all-in-one valve unit, secure TX.
 #define CONFIG_TRV20_PROTO
 // Get defaults for valve applications.
 #include <OTV0p2_valve_ENABLE_defaults.h>
-// All-in-one valve unit (REV20).
+// All-in-one valve unit (DORM1).
 #include <OTV0p2_CONFIG_REV20.h>
 // I/O pin allocation and setup: include ahead of I/O module headers.
 #include <OTV0p2_Board_IO_Config.h>
@@ -89,19 +93,6 @@ OTV0P2BASE::SupplyVoltageCentiVolts Supply_cV;
  */
 OTV0P2BASE::RoomTemperatureC16_TMP112 TemperatureC16;
 
-/*
- * SHT21 instance XXX Disabled
- */
-//OTV0P2BASE::RoomTemperatureC16_SHT21 TemperatureC16; // SHT21 impl.
-
-// HUMIDITY_SENSOR_SUPPORT is defined if at least one humidity sensor has support compiled in.
-// Simple implementations can assume that the sensor will be present if defined;
-// more sophisticated implementations may wish to make run-time checks.
-// If SHT21 support is enabled at compile-time then its humidity sensor may be used at run-time.
-//// Singleton implementation/instance.
-//typedef OTV0P2BASE::HumiditySensorSHT21 RelHumidity_t;
-//RelHumidity_t RelHumidity;
-
 /**
  * Temp pot
  */
@@ -125,11 +116,16 @@ AmbientLight AmbLight;
 static constexpr bool binaryOnlyValveControl = false;
 static constexpr uint8_t m1 = MOTOR_DRIVE_ML;
 static constexpr uint8_t m2 = MOTOR_DRIVE_MR;
-typedef OTRadValve::ValveMotorDirectV1<m1, m2, MOTOR_DRIVE_MI_AIN, MOTOR_DRIVE_MC_AIN, decltype(Supply_cV), &Supply_cV, binaryOnlyValveControl> ValveDirect_t;
-// Singleton implementation/instance.
-// Suppress unnecessary activity when room dark, eg to avoid disturbance if device crashes/restarts,
-// unless recent UI use because value is being fitted/adjusted.
-ValveDirect_t ValveDirect([](){return(AmbLight.isRoomDark());});
+static constexpr uint8_t motorNSleep = 0; // FIXME!!!!
+//typedef OTRadValve::DRV8850HardwareDriver<m1, m2, motorSleep, MOTOR_DRIVE_MI_AIN, MOTOR_DRIVE_MC_AIN, decltype(Supply_cV), &Supply_cV, binaryOnlyValveControl> ValveDirect_t; // XXX using alternative driver
+//// Singleton implementation/instance.
+//// Suppress unnecessary activity when room dark, eg to avoid disturbance if device crashes/restarts,
+//// unless recent UI use because value is being fitted/adjusted.
+//ValveDirect_t ValveDirect([](){return(AmbLight.isRoomDark());});
+OTRadValve::ValveMotorDirectV1HardwareDriver<m1, m2, MOTOR_DRIVE_MI_AIN, MOTOR_DRIVE_MC_AIN, motorNSleep> motorDriver;
+
+//OTRadValve::ValveMotorDirectV1HardwareDriver<motorLeft, motorRight, motorCurrent, motorEncoder> motorDriver;
+OTRadValve::TestValveMotor ValveDirect((OTRadValve::HardwareMotorDriverInterface *)(&motorDriver));
 
 // FUNCTIONS
 
@@ -228,7 +224,7 @@ void setup()
     DEBUG_SERIAL_PRINT(tempPot);
     DEBUG_SERIAL_PRINTLN();
 
-    ValveDirect.read();
+//    ValveDirect.read();
 
     // Initialised: turn main/heatcall UI LED off.
     OTV0P2BASE::LED_HEATCALL_OFF();
@@ -250,28 +246,17 @@ void loop()
     // Power down most stuff (except radio for hub RX).
     OTV0P2BASE::minimisePowerWithoutSleep();
 
-    delay(1000);
-        const int cV = Supply_cV.read();
+    delay(100);
+    const int cV = Supply_cV.read();
     DEBUG_SERIAL_PRINT_FLASHSTRING("V: ");
     DEBUG_SERIAL_PRINT(cV);
     DEBUG_SERIAL_PRINTLN();
-    const int heat = TemperatureC16.read();
-    DEBUG_SERIAL_PRINT_FLASHSTRING("T: ");
-    DEBUG_SERIAL_PRINT(heat);
+    ValveDirect.poll();
+    const uint16_t mi = OTV0P2BASE::analogueNoiseReducedRead(MOTOR_DRIVE_MI_AIN, DEFAULT);
+    DEBUG_SERIAL_PRINT_FLASHSTRING("I: ");
+    DEBUG_SERIAL_PRINT(mi);
     DEBUG_SERIAL_PRINTLN();
-// SHT21 not present by default.
-//    const uint8_t rh = RelHumidity.read();
-//    DEBUG_SERIAL_PRINT_FLASHSTRING("RH%: ");
-//    DEBUG_SERIAL_PRINT(rh);
-//    DEBUG_SERIAL_PRINTLN();
-    const int light = AmbLight.read();
-    DEBUG_SERIAL_PRINT_FLASHSTRING("L: ");
-    DEBUG_SERIAL_PRINT(light);
-    DEBUG_SERIAL_PRINTLN();
-    const int tempPot = TempPot.read();
-    DEBUG_SERIAL_PRINT_FLASHSTRING("temp pot: ");
-    DEBUG_SERIAL_PRINT(tempPot);
-    DEBUG_SERIAL_PRINTLN();
+
 }
 
 
