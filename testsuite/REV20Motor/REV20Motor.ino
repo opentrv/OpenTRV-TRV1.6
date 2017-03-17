@@ -122,7 +122,8 @@ static constexpr uint8_t motorNSleep = 0; // FIXME!!!!
 //// Suppress unnecessary activity when room dark, eg to avoid disturbance if device crashes/restarts,
 //// unless recent UI use because value is being fitted/adjusted.
 //ValveDirect_t ValveDirect([](){return(AmbLight.isRoomDark());});
-OTRadValve::DRV8850HardwareDriver<m1, m2, motorNSleep, 1, MOTOR_DRIVE_MC_AIN> motorDriver;
+OTRadValve::ValveMotorDirectV1HardwareDriver<m1, m2, MOTOR_DRIVE_MI_AIN, MOTOR_DRIVE_MC_AIN, motorNSleep> motorDriver;
+
 //OTRadValve::ValveMotorDirectV1HardwareDriver<motorLeft, motorRight, motorCurrent, motorEncoder> motorDriver;
 OTRadValve::TestValveMotor ValveDirect((OTRadValve::HardwareMotorDriverInterface *)(&motorDriver));
 
