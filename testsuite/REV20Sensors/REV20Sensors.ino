@@ -125,7 +125,9 @@ AmbientLight AmbLight;
 static constexpr bool binaryOnlyValveControl = false;
 static constexpr uint8_t m1 = MOTOR_DRIVE_ML;
 static constexpr uint8_t m2 = MOTOR_DRIVE_MR;
-OTRadValve::ValveMotorDirectV1HardwareDriver<m1, m2, MOTOR_DRIVE_MI_AIN, MOTOR_DRIVE_MC_AIN, motorNSleep> motorDriver;// Singleton implementation/instance.
+static constexpr uint8_t mSleep = 255;
+typedef OTRadValve::ValveMotorDirectV1<OTRadValve::ValveMotorDirectV1HardwareDriver, m1, m2, MOTOR_DRIVE_MI_AIN, MOTOR_DRIVE_MC_AIN, mSleep, decltype(Supply_cV), &Supply_cV> ValveDirect_t;
+// Singleton implementation/instance.
 // Suppress unnecessary activity when room dark, eg to avoid disturbance if device crashes/restarts,
 // unless recent UI use because value is being fitted/adjusted.
 ValveDirect_t ValveDirect([](){return(AmbLight.isRoomDark());});
