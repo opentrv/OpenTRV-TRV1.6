@@ -1,0 +1,400 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:jack_3n
+LIBS:opentrv
+LIBS:TRV2p5-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 4
+Title "TRV3 Motor"
+Date "2017-04-21"
+Rev "1"
+Comp "OpenTRV"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L DRV8850 U?
+U 1 1 58FA2D29
+P 4250 3400
+F 0 "U?" H 4250 3300 50  0000 C CNN
+F 1 "DRV8850" H 4250 3500 50  0000 C CNN
+F 2 "MODULE" H 4250 3400 50  0001 C CNN
+F 3 "DOCUMENTATION" H 4250 3400 50  0001 C CNN
+	1    4250 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58FA2EFC
+P 4250 4550
+F 0 "#PWR?" H 4250 4300 50  0001 C CNN
+F 1 "GND" H 4250 4400 50  0000 C CNN
+F 2 "" H 4250 4550 50  0001 C CNN
+F 3 "" H 4250 4550 50  0001 C CNN
+	1    4250 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 4450 4250 4550
+Wire Wire Line
+	4050 4450 4050 4500
+Wire Wire Line
+	4050 4500 4450 4500
+Connection ~ 4250 4500
+Wire Wire Line
+	4150 4450 4150 4500
+Connection ~ 4150 4500
+Wire Wire Line
+	4450 4500 4450 4450
+Wire Wire Line
+	4350 4450 4350 4500
+Connection ~ 4350 4500
+$Comp
+L VCC #PWR?
+U 1 1 58FA3AB7
+P 5250 3000
+F 0 "#PWR?" H 5250 2850 50  0001 C CNN
+F 1 "VCC" H 5250 3150 50  0000 C CNN
+F 2 "" H 5250 3000 50  0001 C CNN
+F 3 "" H 5250 3000 50  0001 C CNN
+	1    5250 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 3100 5250 3100
+Wire Wire Line
+	5250 3000 5250 3300
+Wire Wire Line
+	5250 3200 5000 3200
+Connection ~ 5250 3100
+Wire Wire Line
+	5250 3300 5000 3300
+Connection ~ 5250 3200
+NoConn ~ 5000 3600
+NoConn ~ 3500 3600
+NoConn ~ 5000 3400
+Wire Wire Line
+	3100 3100 3500 3100
+Wire Wire Line
+	3300 3100 3300 3400
+Wire Wire Line
+	3300 3400 3500 3400
+Wire Wire Line
+	3100 3200 3500 3200
+Wire Wire Line
+	3400 3200 3400 3300
+Wire Wire Line
+	3400 3300 3500 3300
+Text HLabel 3100 3100 0    60   Input ~ 0
+LEFT
+Text HLabel 3100 3200 0    60   Input ~ 0
+RIGHT
+Connection ~ 3300 3100
+Connection ~ 3400 3200
+Text HLabel 3100 3500 0    60   Input ~ 0
+IO_POWER_UP
+Wire Wire Line
+	3500 3500 3100 3500
+Wire Wire Line
+	3400 3000 3500 3000
+Wire Wire Line
+	3400 2450 3400 3000
+Wire Wire Line
+	3400 2800 3500 2800
+Wire Wire Line
+	3500 2900 3400 2900
+Connection ~ 3400 2900
+Wire Wire Line
+	5100 3000 5000 3000
+Wire Wire Line
+	5100 2450 5100 3000
+Wire Wire Line
+	5100 2800 5000 2800
+Wire Wire Line
+	5000 2900 5100 2900
+Connection ~ 5100 2900
+$Comp
+L R R?
+U 1 1 58FA3C5C
+P 3350 3950
+F 0 "R?" V 3430 3950 50  0000 C CNN
+F 1 "24K" V 3350 3950 50  0000 C CNN
+F 2 "" V 3280 3950 50  0001 C CNN
+F 3 "" H 3350 3950 50  0001 C CNN
+	1    3350 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58FA3CA5
+P 3350 4200
+F 0 "#PWR?" H 3350 3950 50  0001 C CNN
+F 1 "GND" H 3350 4050 50  0000 C CNN
+F 2 "" H 3350 4200 50  0001 C CNN
+F 3 "" H 3350 4200 50  0001 C CNN
+	1    3350 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 58FA3CCF
+P 5150 3750
+F 0 "R?" V 5230 3750 50  0000 C CNN
+F 1 "4K3" V 5150 3750 50  0000 C CNN
+F 2 "" V 5080 3750 50  0001 C CNN
+F 3 "" H 5150 3750 50  0001 C CNN
+	1    5150 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58FA3D12
+P 5150 4000
+F 0 "#PWR?" H 5150 3750 50  0001 C CNN
+F 1 "GND" H 5150 3850 50  0000 C CNN
+F 2 "" H 5150 4000 50  0001 C CNN
+F 3 "" H 5150 4000 50  0001 C CNN
+	1    5150 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58FA3D49
+P 2400 4450
+F 0 "C?" H 2425 4550 50  0000 L CNN
+F 1 "10u" H 2425 4350 50  0000 L CNN
+F 2 "" H 2438 4300 50  0001 C CNN
+F 3 "" H 2400 4450 50  0001 C CNN
+	1    2400 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58FA3EA8
+P 2700 4450
+F 0 "C?" H 2725 4550 50  0000 L CNN
+F 1 "100n" H 2725 4350 50  0000 L CNN
+F 2 "" H 2738 4300 50  0001 C CNN
+F 3 "" H 2700 4450 50  0001 C CNN
+	1    2700 4450
+	1    0    0    -1  
+$EndComp
+Text Notes 3500 5000 0    60   ~ 0
+Motor Driver\n- Make sure works without VCP\n- Verify Resistor values\n- Probably need more decoupling
+NoConn ~ 5000 3700
+Wire Wire Line
+	3500 3700 3350 3700
+Wire Wire Line
+	3350 3700 3350 3800
+Wire Wire Line
+	3350 4200 3350 4100
+Wire Wire Line
+	5000 3500 5300 3500
+Wire Wire Line
+	5150 3500 5150 3600
+Wire Wire Line
+	5150 3900 5150 4000
+$Comp
+L VCC #PWR?
+U 1 1 58FA4120
+P 2400 4100
+F 0 "#PWR?" H 2400 3950 50  0001 C CNN
+F 1 "VCC" H 2400 4250 50  0000 C CNN
+F 2 "" H 2400 4100 50  0001 C CNN
+F 3 "" H 2400 4100 50  0001 C CNN
+	1    2400 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58FA412B
+P 2400 4800
+F 0 "#PWR?" H 2400 4550 50  0001 C CNN
+F 1 "GND" H 2400 4650 50  0000 C CNN
+F 2 "" H 2400 4800 50  0001 C CNN
+F 3 "" H 2400 4800 50  0001 C CNN
+	1    2400 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 4100 2400 4300
+Wire Wire Line
+	2400 4200 2700 4200
+Wire Wire Line
+	2700 4200 2700 4300
+Connection ~ 2400 4200
+Wire Wire Line
+	2400 4600 2400 4800
+Wire Wire Line
+	2400 4700 2700 4700
+Wire Wire Line
+	2700 4700 2700 4600
+Connection ~ 2400 4700
+$Comp
+L CONN_01X02 J?
+U 1 1 58FA4241
+P 4250 1950
+F 0 "J?" H 4250 2100 50  0000 C CNN
+F 1 "Motor Out" V 4350 1950 50  0000 C CNN
+F 2 "" H 4250 1950 50  0001 C CNN
+F 3 "" H 4250 1950 50  0001 C CNN
+	1    4250 1950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4300 2150 4300 2450
+Wire Wire Line
+	4300 2450 5100 2450
+Connection ~ 5100 2800
+Wire Wire Line
+	4200 2150 4200 2450
+Wire Wire Line
+	4200 2450 3400 2450
+Connection ~ 3400 2800
+Text HLabel 5300 3500 2    60   Input ~ 0
+CURRENT
+Connection ~ 5150 3500
+$Comp
+L QRE1113GR U?
+U 1 1 58FA4C9A
+P 8250 3300
+F 0 "U?" V 8750 3300 50  0000 L CNN
+F 1 "QRE1113GR" V 8650 3300 50  0000 L CNN
+F 2 "" V 8250 3300 50  0001 L CIN
+F 3 "" V 8100 3525 50  0001 L CNN
+	1    8250 3300
+	0    1    1    0   
+$EndComp
+Text HLabel 7650 3000 0    60   Input ~ 0
+IO_POWER_UP
+Wire Wire Line
+	7650 3000 8150 3000
+$Comp
+L R R?
+U 1 1 58FA4FF2
+P 7750 3200
+F 0 "R?" V 7830 3200 50  0000 C CNN
+F 1 "100K" V 7750 3200 50  0000 C CNN
+F 2 "" V 7680 3200 50  0001 C CNN
+F 3 "" H 7750 3200 50  0001 C CNN
+	1    7750 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 3350 7750 3400
+Wire Wire Line
+	7650 3400 8150 3400
+Wire Wire Line
+	7750 3050 7750 3000
+Connection ~ 7750 3000
+$Comp
+L R R?
+U 1 1 58FA510D
+P 7950 3700
+F 0 "R?" V 8030 3700 50  0000 C CNN
+F 1 "R" V 7950 3700 50  0000 C CNN
+F 2 "" V 7880 3700 50  0001 C CNN
+F 3 "" H 7950 3700 50  0001 C CNN
+	1    7950 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 3200 7950 3200
+Wire Wire Line
+	7950 3200 7950 3550
+$Comp
+L GND #PWR?
+U 1 1 58FA51B0
+P 7950 3950
+F 0 "#PWR?" H 7950 3700 50  0001 C CNN
+F 1 "GND" H 7950 3800 50  0000 C CNN
+F 2 "" H 7950 3950 50  0001 C CNN
+F 3 "" H 7950 3950 50  0001 C CNN
+	1    7950 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 3850 7950 3950
+Wire Wire Line
+	7950 3900 8100 3900
+Wire Wire Line
+	8100 3900 8100 3600
+Wire Wire Line
+	8100 3600 8150 3600
+Connection ~ 7950 3900
+Text HLabel 7650 3400 0    60   Input ~ 0
+ENCODER
+Connection ~ 7750 3400
+Text Notes 7750 4450 0    60   ~ 0
+Motor Encoder\n- Resistor values will need adjusting\n  (1K w/ CNY70)
+$Comp
+L VCC #PWR?
+U 1 1 58FA54A1
+P 9150 3100
+F 0 "#PWR?" H 9150 2950 50  0001 C CNN
+F 1 "VCC" H 9150 3250 50  0000 C CNN
+F 2 "" H 9150 3100 50  0001 C CNN
+F 3 "" H 9150 3100 50  0001 C CNN
+	1    9150 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58FA54C7
+P 9150 3350
+F 0 "C?" H 9175 3450 50  0000 L CNN
+F 1 "100n" H 9175 3250 50  0000 L CNN
+F 2 "" H 9188 3200 50  0001 C CNN
+F 3 "" H 9150 3350 50  0001 C CNN
+	1    9150 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58FA551E
+P 9150 3600
+F 0 "#PWR?" H 9150 3350 50  0001 C CNN
+F 1 "GND" H 9150 3450 50  0000 C CNN
+F 2 "" H 9150 3600 50  0001 C CNN
+F 3 "" H 9150 3600 50  0001 C CNN
+	1    9150 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 3600 9150 3500
+Wire Wire Line
+	9150 3200 9150 3100
+$EndSCHEMATC

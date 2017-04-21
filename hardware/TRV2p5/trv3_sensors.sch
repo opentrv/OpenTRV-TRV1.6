@@ -1,0 +1,204 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:jack_3n
+LIBS:opentrv
+LIBS:TRV2p5-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title "TRV3 Sensors"
+Date "2017-04-21"
+Rev "1"
+Comp "OpenTRV"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Q_Photo_NPN Q?
+U 1 1 58FA0DDD
+P 3250 3250
+F 0 "Q?" H 3450 3300 50  0000 L CNN
+F 1 "Q_Photo_NPN" H 3450 3200 50  0000 L CNN
+F 2 "" H 3450 3350 50  0001 C CNN
+F 3 "" H 3250 3250 50  0001 C CNN
+	1    3250 3250
+	1    0    0    -1  
+$EndComp
+Text HLabel 3050 2800 0    60   Input ~ 0
+IO_POWER_UP
+Text HLabel 3100 3600 0    60   Input ~ 0
+PHT
+$Comp
+L R R?
+U 1 1 58FA0EE6
+P 3350 3850
+F 0 "R?" V 3430 3850 50  0000 C CNN
+F 1 "220K" V 3350 3850 50  0000 C CNN
+F 2 "" V 3280 3850 50  0001 C CNN
+F 3 "" H 3350 3850 50  0001 C CNN
+	1    3350 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 3450 3350 3700
+Wire Wire Line
+	3050 2750 3350 2750
+Wire Wire Line
+	3350 2750 3350 3050
+Wire Wire Line
+	3100 3600 3350 3600
+Connection ~ 3350 3600
+$Comp
+L GND #PWR01
+U 1 1 58FA10E3
+P 3350 4100
+F 0 "#PWR01" H 3350 3850 50  0001 C CNN
+F 1 "GND" H 3350 3950 50  0000 C CNN
+F 2 "" H 3350 4100 50  0001 C CNN
+F 3 "" H 3350 4100 50  0001 C CNN
+	1    3350 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 4100 3350 4000
+Text Notes 2500 4400 0    60   ~ 0
+Ambient Light Sensor
+$Comp
+L TMP102 U?
+U 1 1 58FA1358
+P 6900 3000
+F 0 "U?" H 7000 2600 60  0000 C CNN
+F 1 "TMP102" H 7100 2700 60  0000 C CNN
+F 2 "" H 6900 3000 60  0001 C CNN
+F 3 "" H 6900 3000 60  0001 C CNN
+	1    6900 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58FA1396
+P 8400 3000
+F 0 "C?" H 8425 3100 50  0000 L CNN
+F 1 "100n" H 8425 2900 50  0000 L CNN
+F 2 "" H 8438 2850 50  0001 C CNN
+F 3 "" H 8400 3000 50  0001 C CNN
+	1    8400 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 58FA15A6
+P 8400 2750
+F 0 "#PWR?" H 8400 2600 50  0001 C CNN
+F 1 "VCC" H 8400 2900 50  0000 C CNN
+F 2 "" H 8400 2750 50  0001 C CNN
+F 3 "" H 8400 2750 50  0001 C CNN
+	1    8400 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 2750 8400 2850
+$Comp
+L GND #PWR?
+U 1 1 58FA15CE
+P 8400 3250
+F 0 "#PWR?" H 8400 3000 50  0001 C CNN
+F 1 "GND" H 8400 3100 50  0000 C CNN
+F 2 "" H 8400 3250 50  0001 C CNN
+F 3 "" H 8400 3250 50  0001 C CNN
+	1    8400 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 3250 8400 3150
+$Comp
+L GND #PWR?
+U 1 1 58FA15FE
+P 6150 3100
+F 0 "#PWR?" H 6150 2850 50  0001 C CNN
+F 1 "GND" H 6150 2950 50  0000 C CNN
+F 2 "" H 6150 3100 50  0001 C CNN
+F 3 "" H 6150 3100 50  0001 C CNN
+	1    6150 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 3100 6150 3000
+$Comp
+L VCC #PWR?
+U 1 1 58FA1609
+P 7750 2900
+F 0 "#PWR?" H 7750 2750 50  0001 C CNN
+F 1 "VCC" H 7750 3050 50  0000 C CNN
+F 2 "" H 7750 2900 50  0001 C CNN
+F 3 "" H 7750 2900 50  0001 C CNN
+	1    7750 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 2900 7750 3000
+Wire Wire Line
+	7750 3000 7400 3000
+Wire Wire Line
+	6150 3000 6400 3000
+NoConn ~ 6400 3200
+$Comp
+L GND #PWR?
+U 1 1 58FA1668
+P 7500 3300
+F 0 "#PWR?" H 7500 3050 50  0001 C CNN
+F 1 "GND" H 7500 3150 50  0000 C CNN
+F 2 "" H 7500 3300 50  0001 C CNN
+F 3 "" H 7500 3300 50  0001 C CNN
+	1    7500 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 3300 7500 3200
+Wire Wire Line
+	7500 3200 7400 3200
+Text HLabel 6250 2800 0    60   Input ~ 0
+I2C_SCL
+Wire Wire Line
+	6400 2800 6250 2800
+Text HLabel 7550 2550 2    60   Input ~ 0
+I2C_SDA
+Wire Wire Line
+	7550 2550 7500 2550
+Wire Wire Line
+	7500 2550 7500 2800
+Wire Wire Line
+	7500 2800 7400 2800
+$EndSCHEMATC

@@ -1,0 +1,831 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:jack_3n
+LIBS:opentrv
+LIBS:TRV2p5-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 4
+Title ""
+Date "2017-04-21"
+Rev "1"
+Comp "OpenTRV"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ATMEGA328P-AU U?
+U 1 1 58FA0C89
+P 2800 3950
+F 0 "U?" H 2050 5200 50  0000 L BNN
+F 1 "ATMEGA328P-AU" H 3200 2550 50  0000 L BNN
+F 2 "TQFP32" H 2800 3950 50  0001 C CIN
+F 3 "" H 2800 3950 50  0001 C CNN
+	1    2800 3950
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 9650 1000 950  1050
+U 58FA0D38
+F0 "motor" 60
+F1 "trv3_motor.sch" 60
+F2 "LEFT" I L 9650 1450 60 
+F3 "RIGHT" I L 9650 1600 60 
+F4 "IO_POWER_UP" I L 9650 1150 60 
+F5 "CURRENT" I L 9650 1750 60 
+F6 "ENCODER" I L 9650 1900 60 
+$EndSheet
+$Sheet
+S 9700 4900 950  1000
+U 58FA0D44
+F0 "sensors" 60
+F1 "trv3_sensors.sch" 60
+F2 "IO_POWER_UP" I L 9700 5050 60 
+F3 "PHT" I L 9700 5350 60 
+F4 "I2C_SCL" I L 9700 5550 60 
+F5 "I2C_SDA" I L 9700 5750 60 
+$EndSheet
+$Sheet
+S 9750 3000 950  900 
+U 58FA0D53
+F0 "ui" 60
+F1 "trv3_ui.sch" 60
+F2 "IO_POWER_UP" I L 9750 3150 60 
+F3 "POT" I L 9750 3450 60 
+F4 "BUTTON_CAP" I L 9750 3600 60 
+F5 "LED" I L 9750 3750 60 
+$EndSheet
+$Comp
+L VCC #PWR?
+U 1 1 58FA73EE
+P 1750 2750
+F 0 "#PWR?" H 1750 2600 50  0001 C CNN
+F 1 "VCC" H 1750 2900 50  0000 C CNN
+F 2 "" H 1750 2750 50  0001 C CNN
+F 3 "" H 1750 2750 50  0001 C CNN
+	1    1750 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 2750 1750 2850
+Wire Wire Line
+	1750 2850 1750 2950
+Wire Wire Line
+	1750 2950 1900 2950
+Wire Wire Line
+	1900 2850 1750 2850
+Connection ~ 1750 2850
+$Comp
+L GND #PWR?
+U 1 1 58FA75C5
+P 1800 5250
+F 0 "#PWR?" H 1800 5000 50  0001 C CNN
+F 1 "GND" H 1800 5100 50  0000 C CNN
+F 2 "" H 1800 5250 50  0001 C CNN
+F 3 "" H 1800 5250 50  0001 C CNN
+	1    1800 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 4950 1800 5050
+Wire Wire Line
+	1800 5050 1800 5150
+Wire Wire Line
+	1800 5150 1800 5250
+Wire Wire Line
+	1800 4950 1900 4950
+Wire Wire Line
+	1900 5050 1800 5050
+Connection ~ 1800 5050
+Wire Wire Line
+	1900 5150 1800 5150
+Connection ~ 1800 5150
+$Comp
+L C C?
+U 1 1 58FA7869
+P 1750 3700
+F 0 "C?" H 1775 3800 50  0000 L CNN
+F 1 "100n" H 1775 3600 50  0000 L CNN
+F 2 "" H 1788 3550 50  0001 C CNN
+F 3 "" H 1750 3700 50  0001 C CNN
+	1    1750 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58FA78E2
+P 1750 3900
+F 0 "#PWR?" H 1750 3650 50  0001 C CNN
+F 1 "GND" H 1750 3750 50  0000 C CNN
+F 2 "" H 1750 3900 50  0001 C CNN
+F 3 "" H 1750 3900 50  0001 C CNN
+	1    1750 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 3900 1750 3850
+Wire Wire Line
+	1750 3550 1750 3450
+Wire Wire Line
+	1750 3450 1900 3450
+$Comp
+L C C?
+U 1 1 58FA7A73
+P 1350 3700
+F 0 "C?" H 1375 3800 50  0000 L CNN
+F 1 "100n" H 1375 3600 50  0000 L CNN
+F 2 "" H 1388 3550 50  0001 C CNN
+F 3 "" H 1350 3700 50  0001 C CNN
+	1    1350 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58FA7A79
+P 1350 3900
+F 0 "#PWR?" H 1350 3650 50  0001 C CNN
+F 1 "GND" H 1350 3750 50  0000 C CNN
+F 2 "" H 1350 3900 50  0001 C CNN
+F 3 "" H 1350 3900 50  0001 C CNN
+	1    1350 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 3900 1350 3850
+$Comp
+L R R?
+U 1 1 58FA7AAB
+P 1350 2900
+F 0 "R?" V 1430 2900 50  0000 C CNN
+F 1 "1R0" V 1350 2900 50  0000 C CNN
+F 2 "" V 1280 2900 50  0001 C CNN
+F 3 "" H 1350 2900 50  0001 C CNN
+	1    1350 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 3050 1350 3150
+Wire Wire Line
+	1350 3150 1350 3550
+Connection ~ 1350 3150
+Wire Wire Line
+	1900 3150 1350 3150
+$Comp
+L VCC #PWR?
+U 1 1 58FA80E1
+P 1350 2700
+F 0 "#PWR?" H 1350 2550 50  0001 C CNN
+F 1 "VCC" H 1350 2850 50  0000 C CNN
+F 2 "" H 1350 2700 50  0001 C CNN
+F 3 "" H 1350 2700 50  0001 C CNN
+	1    1350 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 2700 1350 2750
+$Comp
+L C C?
+U 1 1 58FA8492
+P 950 5150
+F 0 "C?" H 975 5250 50  0000 L CNN
+F 1 "100n" H 975 5050 50  0000 L CNN
+F 2 "" H 988 5000 50  0001 C CNN
+F 3 "" H 950 5150 50  0001 C CNN
+	1    950  5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58FA8498
+P 950 5400
+F 0 "#PWR?" H 950 5150 50  0001 C CNN
+F 1 "GND" H 950 5250 50  0000 C CNN
+F 2 "" H 950 5400 50  0001 C CNN
+F 3 "" H 950 5400 50  0001 C CNN
+	1    950  5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  5300 950  5350
+Wire Wire Line
+	950  5350 950  5400
+Wire Wire Line
+	950  4900 950  4950
+Wire Wire Line
+	950  4950 950  5000
+$Comp
+L C C?
+U 1 1 58FA84DF
+P 1250 5150
+F 0 "C?" H 1275 5250 50  0000 L CNN
+F 1 "100n" H 1275 5050 50  0000 L CNN
+F 2 "" H 1288 5000 50  0001 C CNN
+F 3 "" H 1250 5150 50  0001 C CNN
+	1    1250 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 5350 1250 5300
+Wire Wire Line
+	1250 5350 950  5350
+Connection ~ 950  5350
+$Comp
+L VCC #PWR?
+U 1 1 58FA86BC
+P 950 4900
+F 0 "#PWR?" H 950 4750 50  0001 C CNN
+F 1 "VCC" H 950 5050 50  0000 C CNN
+F 2 "" H 950 4900 50  0001 C CNN
+F 3 "" H 950 4900 50  0001 C CNN
+	1    950  4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 5000 1250 4950
+Wire Wire Line
+	1250 4950 950  4950
+Connection ~ 950  4950
+$Comp
+L CONN_02X03 J?
+U 1 1 58FABEEF
+P 3900 1300
+F 0 "J?" H 3900 1500 50  0000 C CNN
+F 1 "ICSP" H 3900 1100 50  0000 C CNN
+F 2 "" H 3900 100 50  0001 C CNN
+F 3 "" H 3900 100 50  0001 C CNN
+	1    3900 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_02X07 J?
+U 1 1 58FAC2E6
+P 1650 1250
+F 0 "J?" H 1650 1650 50  0000 C CNN
+F 1 "DNP" V 1650 1250 50  0000 C CNN
+F 2 "" H 1650 50  50  0001 C CNN
+F 3 "" H 1650 50  50  0001 C CNN
+	1    1650 1250
+	1    0    0    -1  
+$EndComp
+Text Label 3950 5150 0    60   ~ 0
+IO_POWER_UP
+Text Label 3950 3900 0    60   ~ 0
+ML
+Text Label 3950 4000 0    60   ~ 0
+MR
+Text Label 1750 4200 0    60   ~ 0
+MI
+Text Label 1750 4300 0    60   ~ 0
+MC
+Text Label 3950 4100 0    60   ~ 0
+SDA
+Text Label 3950 4200 0    60   ~ 0
+SCL
+Text Label 3950 4450 0    60   ~ 0
+UART_TX
+Text Label 3950 4550 0    60   ~ 0
+UART_RX
+Text Label 3950 4650 0    60   ~ 0
+DQ
+Text Label 3950 4850 0    60   ~ 0
+LED
+Text Label 3950 4950 0    60   ~ 0
+BUTTON
+NoConn ~ 3800 5050
+NoConn ~ 3800 4750
+NoConn ~ 3800 2850
+Wire Wire Line
+	1900 4200 1750 4200
+Wire Wire Line
+	1900 4300 1750 4300
+Wire Wire Line
+	3800 4850 3950 4850
+Wire Wire Line
+	3800 3700 3950 3700
+Wire Wire Line
+	3800 3900 3950 3900
+Wire Wire Line
+	3800 4000 3950 4000
+Wire Wire Line
+	3800 4100 3950 4100
+Wire Wire Line
+	3800 4200 3950 4200
+Wire Wire Line
+	3800 4450 3950 4450
+Wire Wire Line
+	3800 4550 3950 4550
+Wire Wire Line
+	3800 4650 3950 4650
+Text Label 3950 3800 0    60   ~ 0
+DIAL
+Wire Wire Line
+	3950 3800 3800 3800
+Wire Wire Line
+	3800 4950 3950 4950
+Wire Wire Line
+	3800 5150 3950 5150
+$Comp
+L R R?
+U 1 1 58FAE2D3
+P 4350 4100
+F 0 "R?" V 4430 4100 50  0000 C CNN
+F 1 "4K7" V 4350 4100 50  0000 C CNN
+F 2 "" V 4280 4100 50  0001 C CNN
+F 3 "" H 4350 4100 50  0001 C CNN
+	1    4350 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 58FAE3C2
+P 4350 3850
+F 0 "#PWR?" H 4350 3700 50  0001 C CNN
+F 1 "VCC" H 4350 4000 50  0000 C CNN
+F 2 "" H 4350 3850 50  0001 C CNN
+F 3 "" H 4350 3850 50  0001 C CNN
+	1    4350 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 3850 4350 3950
+Wire Wire Line
+	3800 4300 4350 4300
+Wire Wire Line
+	4350 4300 4450 4300
+Wire Wire Line
+	4350 4300 4350 4250
+Text Label 4450 4300 0    60   ~ 0
+RESET
+Connection ~ 4350 4300
+Text Label 8950 1150 0    60   ~ 0
+IO_POWER_UP
+Text Label 9000 3150 0    60   ~ 0
+IO_POWER_UP
+Text Label 9000 5050 0    60   ~ 0
+IO_POWER_UP
+Wire Wire Line
+	8950 1150 9650 1150
+Wire Wire Line
+	9000 3150 9750 3150
+Wire Wire Line
+	9000 5050 9700 5050
+Text Label 3950 3700 0    60   ~ 0
+LIGHT
+Text Label 9000 5350 0    60   ~ 0
+SENSOR_LIGHT
+Text Label 9200 3450 0    60   ~ 0
+UI_DIAL
+Text Label 9200 3750 0    60   ~ 0
+UI_LED
+Text Label 9200 3600 0    60   ~ 0
+UI_BUTTON
+Text Label 8950 1450 0    60   ~ 0
+MOTOR_L
+Text Label 8950 1600 0    60   ~ 0
+MOTOR_R
+Text Label 8950 1900 0    60   ~ 0
+MOTOR_I
+Text Label 8950 1750 0    60   ~ 0
+MOTOR_C
+Text Label 9000 5750 0    60   ~ 0
+SDA
+Text Label 9000 5550 0    60   ~ 0
+SCL
+Wire Wire Line
+	8950 1450 9650 1450
+Wire Wire Line
+	8950 1600 9650 1600
+Wire Wire Line
+	8950 1750 9650 1750
+Wire Wire Line
+	8950 1900 9650 1900
+Wire Wire Line
+	9200 3450 9750 3450
+Wire Wire Line
+	9200 3600 9750 3600
+Wire Wire Line
+	9000 5350 9700 5350
+Wire Wire Line
+	9000 5550 9700 5550
+Wire Wire Line
+	9000 5750 9700 5750
+Text Notes 1100 1850 0    60   ~ 0
+0.1" pitch I2CEXT14\n- Add in resistors
+Text Label 5500 2200 0    60   ~ 0
+SDA
+Text Label 5500 2300 0    60   ~ 0
+SCL
+$Comp
+L R R?
+U 1 1 58FB080E
+P 5950 2000
+F 0 "R?" V 6030 2000 50  0000 C CNN
+F 1 "4K7" V 5950 2000 50  0000 C CNN
+F 2 "" V 5880 2000 50  0001 C CNN
+F 3 "" H 5950 2000 50  0001 C CNN
+	1    5950 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 58FB0952
+P 6150 2000
+F 0 "R?" V 6230 2000 50  0000 C CNN
+F 1 "4K7" V 6150 2000 50  0000 C CNN
+F 2 "" V 6080 2000 50  0001 C CNN
+F 3 "" H 6150 2000 50  0001 C CNN
+	1    6150 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 2200 5950 2200
+Wire Wire Line
+	5950 2200 5950 2150
+Wire Wire Line
+	5500 2300 6150 2300
+Wire Wire Line
+	6150 2300 6150 2150
+$Comp
+L VCC #PWR?
+U 1 1 58FB0B57
+P 5950 1800
+F 0 "#PWR?" H 5950 1650 50  0001 C CNN
+F 1 "VCC" H 5950 1950 50  0000 C CNN
+F 2 "" H 5950 1800 50  0001 C CNN
+F 3 "" H 5950 1800 50  0001 C CNN
+	1    5950 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 58FB0BC7
+P 6150 1800
+F 0 "#PWR?" H 6150 1650 50  0001 C CNN
+F 1 "VCC" H 6150 1950 50  0000 C CNN
+F 2 "" H 6150 1800 50  0001 C CNN
+F 3 "" H 6150 1800 50  0001 C CNN
+	1    6150 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 1800 6150 1850
+Wire Wire Line
+	5950 1800 5950 1850
+$Comp
+L Crystal Y?
+U 1 1 58FB0E80
+P 5250 3750
+F 0 "Y?" H 5250 3900 50  0000 C CNN
+F 1 "FC-12M" H 5250 3600 50  0000 C CNN
+F 2 "" H 5250 3750 50  0001 C CNN
+F 3 "" H 5250 3750 50  0001 C CNN
+	1    5250 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58FB128B
+P 5000 4150
+F 0 "C?" H 5025 4250 50  0000 L CNN
+F 1 "DNP" H 5025 4050 50  0000 L CNN
+F 2 "" H 5038 4000 50  0001 C CNN
+F 3 "" H 5000 4150 50  0001 C CNN
+	1    5000 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58FB132C
+P 5500 4150
+F 0 "C?" H 5525 4250 50  0000 L CNN
+F 1 "DNP" H 5525 4050 50  0000 L CNN
+F 2 "" H 5538 4000 50  0001 C CNN
+F 3 "" H 5500 4150 50  0001 C CNN
+	1    5500 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 3550 5000 3750
+Wire Wire Line
+	5000 3750 5000 4000
+Wire Wire Line
+	5000 3750 5100 3750
+Wire Wire Line
+	5400 3750 5500 3750
+Wire Wire Line
+	5500 3450 5500 3750
+Wire Wire Line
+	5500 3750 5500 4000
+$Comp
+L GND #PWR?
+U 1 1 58FB153A
+P 5000 4350
+F 0 "#PWR?" H 5000 4100 50  0001 C CNN
+F 1 "GND" H 5000 4200 50  0000 C CNN
+F 2 "" H 5000 4350 50  0001 C CNN
+F 3 "" H 5000 4350 50  0001 C CNN
+	1    5000 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58FB15B0
+P 5500 4350
+F 0 "#PWR?" H 5500 4100 50  0001 C CNN
+F 1 "GND" H 5500 4200 50  0000 C CNN
+F 2 "" H 5500 4350 50  0001 C CNN
+F 3 "" H 5500 4350 50  0001 C CNN
+	1    5500 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 4350 5500 4300
+Wire Wire Line
+	5000 4350 5000 4300
+Wire Wire Line
+	3800 3550 5000 3550
+Connection ~ 5000 3750
+Wire Wire Line
+	3800 3450 5500 3450
+Connection ~ 5500 3750
+Text Notes 5600 3950 0    60   ~ 0
+- Replace with quoted version.\n- Caps not needed.
+Text Label 2000 1450 0    60   ~ 0
+UART_TX
+Text Label 950  1450 0    60   ~ 0
+UART_RX
+Text Label 2000 1550 0    60   ~ 0
+DQ
+Text Label 2000 1350 0    60   ~ 0
+SDA
+Text Label 950  1350 0    60   ~ 0
+SCL
+Text Label 3950 3150 0    60   ~ 0
+SPI_MOSI
+Text Label 3950 3250 0    60   ~ 0
+SPI_MISO
+Text Label 3950 3350 0    60   ~ 0
+SPI_SCK
+Text Label 3950 2950 0    60   ~ 0
+I2CEXT_IRQ
+Text Label 3950 3050 0    60   ~ 0
+~SPI_SS
+Text Label 800  1250 0    60   ~ 0
+I2CEXT_IRQ
+Text Label 2000 1250 0    60   ~ 0
+~SPI_SS
+Wire Wire Line
+	3800 2950 3950 2950
+Wire Wire Line
+	3800 3050 3950 3050
+Wire Wire Line
+	3800 3150 3950 3150
+Wire Wire Line
+	3800 3250 3950 3250
+Wire Wire Line
+	3800 3350 3950 3350
+Text Label 4250 1300 0    60   ~ 0
+SPI_MOSI
+Text Label 3200 1200 0    60   ~ 0
+SPI_MISO
+Text Label 3200 1300 0    60   ~ 0
+SPI_SCK
+Text Label 3200 1400 0    60   ~ 0
+RESET
+$Comp
+L GND #PWR?
+U 1 1 58FB615D
+P 4250 1500
+F 0 "#PWR?" H 4250 1250 50  0001 C CNN
+F 1 "GND" H 4250 1350 50  0000 C CNN
+F 2 "" H 4250 1500 50  0001 C CNN
+F 3 "" H 4250 1500 50  0001 C CNN
+	1    4250 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 58FB6207
+P 4250 1100
+F 0 "#PWR?" H 4250 950 50  0001 C CNN
+F 1 "VCC" H 4250 1250 50  0000 C CNN
+F 2 "" H 4250 1100 50  0001 C CNN
+F 3 "" H 4250 1100 50  0001 C CNN
+	1    4250 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 1100 4250 1200
+Wire Wire Line
+	4250 1200 4150 1200
+Wire Wire Line
+	4150 1400 4250 1400
+Wire Wire Line
+	4250 1400 4250 1500
+Wire Wire Line
+	3200 1200 3650 1200
+Wire Wire Line
+	3200 1300 3650 1300
+Wire Wire Line
+	3200 1400 3650 1400
+Wire Wire Line
+	4150 1300 4250 1300
+Text Label 2000 1050 0    60   ~ 0
+SPI_MOSI
+Text Label 950  950  0    60   ~ 0
+SPI_MISO
+Text Label 950  1050 0    60   ~ 0
+SPI_SCK
+Text Label 950  1150 0    60   ~ 0
+RESET
+$Comp
+L GND #PWR?
+U 1 1 58FB69EC
+P 2500 1250
+F 0 "#PWR?" H 2500 1000 50  0001 C CNN
+F 1 "GND" H 2500 1100 50  0000 C CNN
+F 2 "" H 2500 1250 50  0001 C CNN
+F 3 "" H 2500 1250 50  0001 C CNN
+	1    2500 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 58FB69F2
+P 2000 850
+F 0 "#PWR?" H 2000 700 50  0001 C CNN
+F 1 "VCC" H 2000 1000 50  0000 C CNN
+F 2 "" H 2000 850 50  0001 C CNN
+F 3 "" H 2000 850 50  0001 C CNN
+	1    2000 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 850  2000 950 
+Wire Wire Line
+	2000 950  1900 950 
+Wire Wire Line
+	1900 1150 2500 1150
+Wire Wire Line
+	2500 1150 2500 1250
+Wire Wire Line
+	950  950  1400 950 
+Wire Wire Line
+	950  1050 1400 1050
+Wire Wire Line
+	950  1150 1400 1150
+Wire Wire Line
+	1900 1050 2000 1050
+Wire Wire Line
+	800  1250 1400 1250
+Wire Wire Line
+	950  1350 1400 1350
+Wire Wire Line
+	950  1450 1400 1450
+Wire Wire Line
+	1900 1250 2000 1250
+Wire Wire Line
+	1900 1350 2000 1350
+Wire Wire Line
+	1900 1450 2000 1450
+Wire Wire Line
+	1900 1550 2000 1550
+NoConn ~ 1400 1550
+Text Notes 3150 1850 0    60   ~ 0
+TagConnect header.\n- Could expand to be I2CEXT14
+Wire Wire Line
+	9200 3750 9750 3750
+$Comp
+L Polyfuse_Small F?
+U 1 1 58FBA8F6
+P 1550 6400
+F 0 "F?" V 1475 6400 50  0000 C CNN
+F 1 "Polyfuse_Small" V 1625 6400 50  0000 C CNN
+F 2 "" H 1600 6200 50  0001 L CNN
+F 3 "" H 1550 6400 50  0001 C CNN
+	1    1550 6400
+	0    1    1    0   
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 58FBAC89
+P 2300 6350
+F 0 "#PWR?" H 2300 6200 50  0001 C CNN
+F 1 "VCC" H 2300 6500 50  0000 C CNN
+F 2 "" H 2300 6350 50  0001 C CNN
+F 3 "" H 2300 6350 50  0001 C CNN
+	1    2300 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 6400 1900 6400
+Wire Wire Line
+	1900 6400 2300 6400
+Wire Wire Line
+	2300 6400 2300 6350
+$Comp
+L CONN_01X01 J?
+U 1 1 58FBB069
+P 1100 6400
+F 0 "J?" H 1100 6500 50  0000 C CNN
+F 1 "+Vbat" V 1200 6400 50  0000 C CNN
+F 2 "" H 1100 6400 50  0001 C CNN
+F 3 "" H 1100 6400 50  0001 C CNN
+	1    1100 6400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 6400 1450 6400
+$Comp
+L PWR_FLAG #FLG?
+U 1 1 58FBB63C
+P 1900 6350
+F 0 "#FLG?" H 1900 6425 50  0001 C CNN
+F 1 "PWR_FLAG" H 1900 6500 50  0000 C CNN
+F 2 "" H 1900 6350 50  0001 C CNN
+F 3 "" H 1900 6350 50  0001 C CNN
+	1    1900 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 6350 1900 6400
+Connection ~ 1900 6400
+$Comp
+L CONN_01X01 J?
+U 1 1 58FBB83C
+P 1100 6900
+F 0 "J?" H 1100 7000 50  0000 C CNN
+F 1 "-Vbat" V 1200 6900 50  0000 C CNN
+F 2 "" H 1100 6900 50  0001 C CNN
+F 3 "" H 1100 6900 50  0001 C CNN
+	1    1100 6900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG?
+U 1 1 58FBB87C
+P 1900 6850
+F 0 "#FLG?" H 1900 6925 50  0001 C CNN
+F 1 "PWR_FLAG" H 1900 7000 50  0000 C CNN
+F 2 "" H 1900 6850 50  0001 C CNN
+F 3 "" H 1900 6850 50  0001 C CNN
+	1    1900 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 6900 1900 6900
+Wire Wire Line
+	1900 6900 2300 6900
+Wire Wire Line
+	1900 6900 1900 6850
+$Comp
+L GND #PWR?
+U 1 1 58FBB960
+P 2300 6950
+F 0 "#PWR?" H 2300 6700 50  0001 C CNN
+F 1 "GND" H 2300 6800 50  0000 C CNN
+F 2 "" H 2300 6950 50  0001 C CNN
+F 3 "" H 2300 6950 50  0001 C CNN
+	1    2300 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 6900 2300 6950
+Connection ~ 1900 6900
+Text Notes 1000 7400 0    60   ~ 0
+On PCB battery contacts\n- AA or AAA cells\n- Underside of PCB?\n- Verticle or horizontal?\n- Polyfuse value?
+Text Notes 5700 2400 0    60   ~ 0
+I2C pull ups
+$EndSCHEMATC
