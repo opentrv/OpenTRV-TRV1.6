@@ -11,7 +11,7 @@ before_install:
   - unzip master.zip.1
   - sudo mv arduino-1.8.1 /usr/local/share/arduino
   - sudo ln -s /usr/local/share/arduino/arduino /usr/local/bin/arduino
-  - chmod +x trv2_compilation_test.sh
+  - chmod +x trv_compilation_test.sh
 install:
   - arduino --pref "boardsmanager.additional.urls=https://raw.githubusercontent.com/opentrv/OpenTRV-Config/master/Arduino/package_opentrv_index.json" --save-prefs
   - arduino --install-boards "opentrv:avr"
@@ -21,7 +21,7 @@ install:
   - ln -s $PWD/OTRadioLink-master/content/OTRadioLink /usr/local/share/arduino/libraries/OTRadioLink
 
 script:
-  - ./trv2_compilation_test.sh
+  - ./trv_compilation_test.sh
 notifications:
   email:
     recipients:
